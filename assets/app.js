@@ -63,7 +63,7 @@
 
   const $ = id => document.getElementById(id);
   const cache = {};
-  let N = null, lang = "en", timer = null, firstDraw = true;
+  let N = null, lang = "en", timer = null, firstDraw = true, seq = 0;
 
   const store = {
     get() { try { return localStorage.getItem("pk-lang"); } catch (e) { return null; } },
@@ -146,8 +146,10 @@
     W.good.forEach(o => { if (o.w[1] > D.sr && o.w[0] < D.ss) segs.push(add("path", { class: "seg good", d: arcPath(f(o.w[0]), f(o.w[1])) })); });
     // Rahu label above its band
     const rf = (Math.max(D.rahu[0], D.sr) + Math.min(D.rahu[1], D.ss)) / 2;
-    const [rx, ry] = (() => { const a = Math.PI * (1 - f(rf)); return [CX + (R + 34) * Math.cos(a), CY - (R + 34) * Math.sin(a)]; })();
-    add("text", { class: "tick", x: rx, y: ry + 5, "text-anchor": "middle" }).textContent = L.rahu;
+    const [rx, ry] = (() => { const a = Math.PI * (1 - f(rf)); return [CX + (R - 40) * Math.cos(a), CY - (R - 40) * Math.sin(a)]; })();
+    const rpos = f(rf), anchor = rpos > 0.6 ? "end" : rpos < 0.4 ? "start" : "middle";
+    const rdx = 0;
+    add("text", { class: "tick", x: rx + rdx, y: ry + 5, "text-anchor": anchor }).textContent = L.rahu;
     $("ends").innerHTML = `<span>${L.sunrise} <b>${fmt(D.sr)}</b></span><span>${L.sunset} <b>${fmt(D.ss)}</b></span>`;
     if (now >= D.sr && now <= D.ss) {
       const [sx, sy] = pt(f(now));
@@ -221,9 +223,11 @@
     document.querySelectorAll("[data-t]").forEach(el => { const v = t[el.dataset.t]; if (typeof v === "string") el.textContent = v; });
     document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.l === lang)));
     $("cta-tg").href = LINKS[lang][0]; $("cta-yt").href = LINKS[lang][1];
+    const mine = ++seq;
     try {
       N = N || await json("data/names.json");
       const days = await json(`data/${CITY[lang]}.json`);
+      if (mine !== seq) return; // a newer render (language switch) has started
       const { iso, min } = istNow();
       const D = days.find(x => x.d === iso);
       if (!D) { $("status").textContent = t.noData; return; }
