@@ -17,7 +17,7 @@
       now: "Now", nowGood: "Good time now", until: "until", next: "Next", from: "from",
       clear: "No time to avoid right now.", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
       before: "Before sunrise.", city: { hyderabad: "Hyderabad", chennai: "Chennai" },
-      noData: "Today's panchangam will be back shortly.",
+      noData: "Today's panchangam will be back shortly.", noPeriod: "No special period at this time",
     },
     te: {
       title: "బయటికి వెళ్ళే ముందు నేటి శుభ సమయం తెలుసుకోండి.",
@@ -34,7 +34,7 @@
       now: "ఇప్పుడు", nowGood: "ఇప్పుడు శుభ సమయం", until: "వరకు", next: "తదుపరి", from: "నుండి",
       clear: "ఇప్పుడు వర్జించవలసిన సమయం లేదు.", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
       before: "ఇంకా సూర్యోదయం కాలేదు.", city: { hyderabad: "హైదరాబాద్", chennai: "చెన్నై" },
-      noData: "నేటి పంచాంగం త్వరలో వస్తుంది.",
+      noData: "నేటి పంచాంగం త్వరలో వస్తుంది.", noPeriod: "ఈ సమయంలో ప్రత్యేక కాలం లేదు",
     },
     ta: {
       title: "வெளியே கிளம்பும் முன் இன்றைய நல்ல நேரத்தை அறிந்துகொள்ளுங்கள்.",
@@ -51,7 +51,7 @@
       now: "இப்போது", nowGood: "இப்போது நல்ல நேரம்", until: "வரை", next: "அடுத்து", from: "முதல்",
       clear: "இப்போது தவிர்க்க வேண்டிய நேரம் இல்லை.", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
       before: "இன்னும் சூரிய உதயம் ஆகவில்லை.", city: { hyderabad: "ஹைதராபாத்", chennai: "சென்னை" },
-      noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.",
+      noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.", noPeriod: "இந்த நேரத்தில் தனி காலம் இல்லை",
     },
   };
   const CITY = { te: "hyderabad", en: "hyderabad", ta: "chennai" };
@@ -63,7 +63,7 @@
 
   const $ = id => document.getElementById(id);
   const cache = {};
-  let N = null, lang = "en", timer = null, firstDraw = true, seq = 0;
+  let N = null, lang = "en", timer = null, firstDraw = true, seq = 0, current = null;
 
   const store = {
     get() { try { return localStorage.getItem("pk-lang"); } catch (e) { return null; } },
@@ -232,6 +232,7 @@
       const D = days.find(x => x.d === iso);
       if (!D) { $("status").textContent = t.noData; return; }
       const W = windows(D);
+      current = { D, W };
       header(D); drawArc(D, W, min); status(D, W, min); limbs(D); lists(D, W);
     } catch (e) {
       $("status").textContent = t.noData;
@@ -248,6 +249,35 @@
   document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => {
     lang = b.dataset.l; store.set(lang); render();
   }));
+
+  // ---------- hover / tap on the arc: show the time and what period it falls in ----------
+  function setupArcHover() {
+    const svg = $("arc"), tip = $("arctip");
+    function show(evt) {
+      if (!current) return;
+      const { D, W } = current;
+      const pt0 = svg.createSVGPoint(); pt0.x = evt.clientX; pt0.y = evt.clientY;
+      const p = pt0.matrixTransform(svg.getScreenCTM().inverse());
+      const dx = p.x - CX, dy = CY - p.y, r = Math.hypot(dx, dy);
+      if (dy < -10 || r < R - 34 || r > R + 34) { tip.hidden = true; return; }
+      const f = Math.min(1, Math.max(0, 1 - Math.atan2(Math.max(dy, 0), dx) / Math.PI));
+      const m = Math.round(D.sr + f * (D.ss - D.sr));
+      const hits = [...W.avoid.map(o => ({ ...o, bad: true })), ...W.good].filter(o => m >= o.w[0] && m < o.w[1]);
+      const t = UI[lang];
+      tip.innerHTML = `<div class="tt-time">${fmt(m)}</div>` + (hits.length
+        ? hits.map(o => `<div class="tt-row ${o.bad ? "bad" : "good"}"><span></span><b>${o.k}</b><br>${span(o.w)}</div>`).join("")
+        : `<div class="tt-row none">${t.noPeriod}</div>`);
+      const box = svg.parentElement.getBoundingClientRect();
+      tip.hidden = false;
+      let x = evt.clientX - box.left + 14, y = evt.clientY - box.top + 14;
+      if (x + tip.offsetWidth > box.width) x = evt.clientX - box.left - tip.offsetWidth - 14;
+      tip.style.left = x + "px"; tip.style.top = y + "px";
+    }
+    svg.addEventListener("pointermove", show);
+    svg.addEventListener("pointerdown", show);
+    svg.addEventListener("pointerleave", () => { tip.hidden = true; });
+  }
+
   // enlarge a sample card in place instead of leaving the page
   const viewer = $("viewer"), vimg = $("viewer-img");
   let lastFocus = null;
@@ -260,6 +290,7 @@
   viewer.addEventListener("click", e => { if (e.target !== vimg) closeViewer(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && !viewer.hidden) closeViewer(); });
 
+  setupArcHover();
   lang = pick();
   render();
   clearInterval(timer);
