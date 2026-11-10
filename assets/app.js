@@ -248,6 +248,18 @@
   document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => {
     lang = b.dataset.l; store.set(lang); render();
   }));
+  // enlarge a sample card in place instead of leaving the page
+  const viewer = $("viewer"), vimg = $("viewer-img");
+  let lastFocus = null;
+  function closeViewer() { viewer.hidden = true; vimg.removeAttribute("src"); if (lastFocus) lastFocus.focus(); }
+  document.querySelectorAll("a.shot").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault(); lastFocus = a;
+    vimg.src = a.getAttribute("href"); vimg.alt = a.querySelector("img").alt;
+    viewer.hidden = false; $("viewer-close").focus();
+  }));
+  viewer.addEventListener("click", e => { if (e.target !== vimg) closeViewer(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !viewer.hidden) closeViewer(); });
+
   lang = pick();
   render();
   clearInterval(timer);

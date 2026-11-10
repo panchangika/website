@@ -154,3 +154,11 @@ footer nav{display:flex;gap:20px}
   section{padding:40px 0}
   .btn{width:100%;justify-content:center}
 }
+
+/* card viewer */
+.viewer{position:fixed;inset:0;background:rgba(40,20,14,.82);display:flex;align-items:center;justify-content:center;padding:24px;z-index:50;cursor:zoom-out}
+.viewer[hidden]{display:none}
+.viewer img{max-width:min(92vw,720px);max-height:88vh;width:auto;height:auto;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.4);background:#fff}
+.viewer button{position:absolute;top:16px;right:18px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--maroon);font-size:26px;line-height:1;cursor:pointer}
+.card a.shot{cursor:zoom-in;position:relative}
+.card a.shot::after{content:"Tap to enlarge";position:absolute;right:12px;bottom:12px;background:rgba(107,30,46,.9);color:#fff;font:600 13px var(--body);padding:6px 11px;border-radius:999px;opacity:.95}
