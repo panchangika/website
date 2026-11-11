@@ -12,7 +12,7 @@
       how: "How the times are worked out",
       how1: "Every time is calculated from the real positions of the sun and moon for the city shown, using the Lahiri ayanamsa that most Indian almanacs follow. Each day's figures are checked against standard printed panchangams.",
       how2: "Rahu kalam, Yamagandam and Gulika come from the length of the day between sunrise and sunset, so they shift a little every day and from city to city. For a wedding, griha pravesham or other important event, confirm the muhurtham with your family priest.",
-      privacy: "Privacy", terms: "Terms",
+      privacy: "Privacy", terms: "Terms", meanings: "Meanings",
       fullLead: c => `All times are Indian Standard Time for ${c}.`,
       now: "Now", nowGood: "Good time now", until: "until", next: "Next", from: "from",
       clear: "No time to avoid right now.", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
@@ -29,7 +29,7 @@
       how: "సమయాలు ఎలా లెక్కిస్తాం",
       how1: "ప్రతి సమయాన్ని ఆ నగరానికి సూర్య చంద్రుల అసలు స్థానాల నుండి, చాలా పంచాంగాలు అనుసరించే లాహిరి అయనాంశతో లెక్కిస్తాం. ప్రతి రోజు వివరాలను ప్రామాణిక పంచాంగాలతో సరిచూస్తాం.",
       how2: "రాహుకాలం, యమగండం, గుళిక కాలం సూర్యోదయం నుండి సూర్యాస్తమయం వరకు ఉన్న పగటి నిడివి మీద ఆధారపడతాయి, అందుకే రోజుకీ నగరానికీ కొద్దిగా మారుతాయి. పెళ్ళి, గృహప్రవేశం వంటి ముఖ్యమైన కార్యాలకు ముహూర్తాన్ని మీ పురోహితుల దగ్గర నిర్ధారించుకోండి.",
-      privacy: "గోప్యత", terms: "నిబంధనలు",
+      privacy: "గోప్యత", terms: "నిబంధనలు", meanings: "అర్థాలు",
       fullLead: c => `అన్ని సమయాలు ${c} భారత కాలమానం ప్రకారం.`,
       now: "ఇప్పుడు", nowGood: "ఇప్పుడు శుభ సమయం", until: "వరకు", next: "తదుపరి", from: "నుండి",
       clear: "ఇప్పుడు వర్జించవలసిన సమయం లేదు.", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
@@ -46,7 +46,7 @@
       how: "நேரங்கள் எப்படி கணக்கிடப்படுகின்றன",
       how1: "ஒவ்வொரு நேரமும் அந்த நகரத்திற்கான சூரியன், சந்திரன் உண்மையான நிலைகளிலிருந்து, பெரும்பாலான பஞ்சாங்கங்கள் பின்பற்றும் லாஹிரி அயனாம்சத்துடன் கணக்கிடப்படுகிறது. தினசரி விவரங்கள் நிலையான பஞ்சாங்கங்களுடன் சரிபார்க்கப்படுகின்றன.",
       how2: "ராகு காலம், எமகண்டம், குளிகை ஆகியவை சூரிய உதயம் முதல் அஸ்தமனம் வரையிலான பகல் நேரத்தைப் பொறுத்தவை, எனவே நாளுக்கு நாள், ஊருக்கு ஊர் சற்று மாறும். திருமணம், கிரகப்பிரவேசம் போன்ற முக்கிய நிகழ்வுகளுக்கு முகூர்த்தத்தை உங்கள் குடும்ப புரோகிதரிடம் உறுதி செய்துகொள்ளுங்கள்.",
-      privacy: "தனியுரிமை", terms: "விதிமுறைகள்",
+      privacy: "தனியுரிமை", terms: "விதிமுறைகள்", meanings: "விளக்கங்கள்",
       fullLead: c => `எல்லா நேரங்களும் ${c} இந்திய நேரப்படி.`,
       now: "இப்போது", nowGood: "இப்போது நல்ல நேரம்", until: "வரை", next: "அடுத்து", from: "முதல்",
       clear: "இப்போது தவிர்க்க வேண்டிய நேரம் இல்லை.", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
@@ -54,7 +54,39 @@
       noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.", noPeriod: "இந்த நேரத்தில் தனி காலம் இல்லை",
     },
   };
+
+  // short meanings shown on hover / tap (Telugu and Tamil to be checked by a native reader)
+  const DEF = {
+    en: {
+      rahu: "About 1½ hours each day (one-eighth of the daytime) linked to Rahu. Traditionally avoided for starting new work, journeys, purchases or ceremonies.",
+      yama: "One-eighth of the daytime linked to Yama. Traditionally considered unsuitable for auspicious beginnings, especially setting out on a journey.",
+      gulika: "One-eighth of the daytime ruled by Gulika, son of Shani. Whatever is started now is believed to repeat, so families avoid it for funerals or taking loans.",
+      durmuhurtham: "An inauspicious muhurtham of about 48 minutes, fixed by the weekday (once or twice a day). Avoided for weddings, griha pravesham and new ventures.",
+      varjyam: "A period of about 1½ hours linked to the day's nakshatra, considered harmful. Auspicious work is not started in it.",
+      amrita: "A favourable period linked to the day's nakshatra. Considered good for starting important work and ceremonies.",
+      abhijit: "About 48 minutes around local midday, considered auspicious for most new beginnings. Traditionally not used on Wednesdays.",
+      gowri: "Gowri panchangam divides the day and the night into eight parts each. The good parts (Amirdham, Uthi, Labam, Dhanam, Sugam) suit new work.",
+      chandrashtamam: "The roughly 2¼ days when the Moon passes the 8th sign from a person's birth rasi. People of the rasi shown are advised to be careful and avoid big decisions.",
+    },
+    te: {
+      rahu: "పగటి సమయంలో ఎనిమిదో వంతు (సుమారు గంటన్నర) రాహువుకు చెందిన కాలం. కొత్త పనులు, ప్రయాణాలు, కొనుగోళ్లు, శుభకార్యాలు ఈ సమయంలో ప్రారంభించరాదని సంప్రదాయం.",
+      yama: "పగటి సమయంలో యముడికి చెందిన ఎనిమిదో భాగం. శుభకార్యాలు, ముఖ్యంగా ప్రయాణాలు ప్రారంభించడానికి అనుకూలం కాదని నమ్మకం.",
+      gulika: "శని పుత్రుడైన గుళికుడికి చెందిన పగటి ఎనిమిదో భాగం. ఈ సమయంలో మొదలుపెట్టిన పని మళ్లీ మళ్లీ జరుగుతుందని నమ్మకం; అందుకే అంత్యక్రియలు, అప్పులు ఈ సమయంలో చేయరు.",
+      durmuhurtham: "వారాన్ని బట్టి వచ్చే సుమారు 48 నిమిషాల అశుభ ముహూర్తం (రోజుకు ఒకటి లేదా రెండు సార్లు). పెళ్లి, గృహప్రవేశం, కొత్త వ్యాపారాలకు దీనిని వదిలేస్తారు.",
+      varjyam: "ఆ రోజు నక్షత్రాన్ని బట్టి వచ్చే సుమారు గంటన్నర అశుభ కాలం. శుభకార్యాలు ఈ సమయంలో ప్రారంభించరు.",
+      amrita: "ఆ రోజు నక్షత్రాన్ని బట్టి వచ్చే శుభ సమయం. ముఖ్యమైన పనులు, శుభకార్యాలు ప్రారంభించడానికి మంచిదని నమ్మకం.",
+      abhijit: "మధ్యాహ్నం చుట్టూ ఉండే సుమారు 48 నిమిషాల శుభ ముహూర్తం. చాలా కొత్త పనులకు అనుకూలం; బుధవారం దీనిని పాటించరు.",
+    },
+    ta: {
+      rahu: "பகல் நேரத்தின் எட்டில் ஒரு பங்கு (சுமார் ஒன்றரை மணி நேரம்) ராகுவுக்குரிய காலம். புதிய காரியங்கள், பயணம், பொருள் வாங்குதல், சுப நிகழ்ச்சிகளை இந்த நேரத்தில் தொடங்குவதில்லை என்பது மரபு.",
+      yama: "பகல் நேரத்தில் எமனுக்குரிய எட்டில் ஒரு பங்கு. சுப காரியங்களுக்கு, குறிப்பாக பயணம் தொடங்க, ஏற்றதல்ல என்பது நம்பிக்கை.",
+      gulika: "சனியின் மகனான குளிகனுக்குரிய பகல் நேரப் பகுதி. இந்த நேரத்தில் தொடங்கும் செயல் மீண்டும் மீண்டும் நடக்கும் என்பது நம்பிக்கை; அதனால் இறுதிச் சடங்கு, கடன் வாங்குதல் போன்றவற்றைத் தவிர்ப்பார்கள்.",
+      gowri: "கௌரி பஞ்சாங்கம் பகலையும் இரவையும் தலா எட்டு பகுதிகளாகப் பிரிக்கிறது. அமிர்தம், உத்தி, லாபம், தனம், சுகம் ஆகிய பகுதிகள் நல்ல காரியங்களுக்கு ஏற்றவை.",
+      chandrashtamam: "பிறந்த ராசியிலிருந்து எட்டாவது ராசியில் சந்திரன் சஞ்சரிக்கும் சுமார் இரண்டே கால் நாட்கள். குறிப்பிட்ட ராசிக்காரர்கள் முக்கிய முடிவுகளைத் தவிர்த்து கவனமாக இருப்பது நல்லது என்பது நம்பிக்கை.",
+    },
+  };
   const CITY = { te: "hyderabad", en: "hyderabad", ta: "chennai" };
+  const cityOf = l => document.documentElement.dataset.city || CITY[l];
   const LINKS = {
     te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu"],
     ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil"],
@@ -106,15 +138,16 @@
   function windows(D) {
     const L = N.LABEL[lang];
     const good = [], avoid = [];
-    if (lang === "ta") D.gowri.forEach(w => good.push({ k: L.gowri, w }));
+    if (lang === "ta") D.gowri.forEach(w => good.push({ id: "gowri", k: L.gowri, w }));
     else {
-      if (D.abh) good.push({ k: L.abhijit, w: D.abh });
-      D.amr.forEach(w => good.push({ k: L.amrita, w }));
+      if (document.documentElement.dataset.city === "chennai") D.gowri.forEach(w => good.push({ id: "gowri", k: L.gowri, w }));
+      if (D.abh) good.push({ id: "abhijit", k: L.abhijit, w: D.abh });
+      D.amr.forEach(w => good.push({ id: "amrita", k: L.amrita, w }));
     }
-    avoid.push({ k: L.rahu, w: D.rahu, main: true }, { k: L.yama, w: D.yama }, { k: L.gulika, w: D.gul });
+    avoid.push({ id: "rahu", k: L.rahu, w: D.rahu, main: true }, { id: "yama", k: L.yama, w: D.yama }, { id: "gulika", k: L.gulika, w: D.gul });
     if (lang !== "ta") {
-      D.dur.forEach(w => avoid.push({ k: L.durmuhurtham, w }));
-      D.varj.forEach(w => avoid.push({ k: L.varjyam, w }));
+      D.dur.forEach(w => avoid.push({ id: "durmuhurtham", k: L.durmuhurtham, w }));
+      D.varj.forEach(w => avoid.push({ id: "varjyam", k: L.varjyam, w }));
     }
     return { good, avoid };
   }
@@ -209,12 +242,15 @@
     const L = N.LABEL[lang], t = UI[lang];
     $("h-good").textContent = L.good;
     $("h-avoid").textContent = lang === "ta" ? L.avoid : (lang === "te" ? "వర్జించవలసిన సమయాలు" : "Times to avoid");
-    const li = o => `<li><span>${o.k}</span><span>${span(o.w)}</span></li>`;
+    const term = (id, label) => DEF[lang][id]
+      ? `<button type="button" class="term" data-id="${id}" aria-describedby="deftip">${label}<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 7v4.2M8 4.6v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>`
+      : `<span>${label}</span>`;
+    const li = o => `<li>${term(o.id, o.k)}<span>${span(o.w)}</span></li>`;
     $("l-good").innerHTML = W.good.map(li).join("") || `<li><span>–</span><span></span></li>`;
     let av = W.avoid.map(li).join("");
-    if (lang !== "te") av += `<li><span>${L.chandrashtamam}</span><span>${N.RASI[lang][D.ch]}</span></li>`;
+    if (lang !== "te") av += `<li>${term("chandrashtamam", L.chandrashtamam)}<span>${N.RASI[lang][D.ch]}</span></li>`;
     $("l-avoid").innerHTML = av;
-    $("full-lead").textContent = t.fullLead(t.city[CITY[lang]]);
+    $("full-lead").textContent = t.fullLead(t.city[cityOf(lang)]);
   }
 
   async function render() {
@@ -225,8 +261,8 @@
     $("cta-tg").href = LINKS[lang][0]; $("cta-yt").href = LINKS[lang][1];
     const mine = ++seq;
     try {
-      N = N || await json("data/names.json");
-      const days = await json(`data/${CITY[lang]}.json`);
+      N = N || await json("/data/names.json");
+      const days = await json(`/data/${cityOf(lang)}.json`);
       if (mine !== seq) return; // a newer render (language switch) has started
       const { iso, min } = istNow();
       const D = days.find(x => x.d === iso);
@@ -239,16 +275,52 @@
     }
   }
 
+  // each language has its own address: / (English), /te/, /ta/
+  const PATH = { en: "/", te: "/te/", ta: "/ta/" };
+  const pageLang = document.documentElement.dataset.lang || "en";
   function pick() {
     const saved = store.get();
-    if (saved && UI[saved]) return saved;
-    const nav = (navigator.language || "en").slice(0, 2);
-    return UI[nav] ? nav : "en";
+    // on the English home page only, send people who chose Telugu or Tamil before to their page
+    if (location.pathname === "/" && saved && saved !== "en" && PATH[saved]) { location.replace(PATH[saved]); return saved; }
+    return UI[pageLang] ? pageLang : "en";
   }
 
   document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => {
-    lang = b.dataset.l; store.set(lang); render();
+    const l = b.dataset.l; store.set(l);
+    if (l !== pageLang) location.href = PATH[l]; 
   }));
+
+
+  // ---------- meaning popover for each period name ----------
+  function setupMeanings() {
+    const tip = $("deftip");
+    let openBtn = null, wasOpen = false;
+    function place(btn) {
+      const id = btn.dataset.id, text = DEF[lang][id];
+      if (!text) return;
+      tip.innerHTML = `<b>${btn.textContent}</b>${text}`;
+      tip.hidden = false;
+      const r = btn.getBoundingClientRect(), w = tip.offsetWidth;
+      let left = r.left + window.scrollX;
+      left = Math.max(12, Math.min(left, window.scrollX + document.documentElement.clientWidth - w - 12));
+      tip.style.left = left + "px";
+      tip.style.top = (r.bottom + window.scrollY + 8) + "px";
+      openBtn = btn;
+    }
+    function hide() { tip.hidden = true; openBtn = null; }
+    const lists = [$("l-good"), $("l-avoid")];
+    lists.forEach(ul => {
+      ul.addEventListener("mouseover", e => { const b = e.target.closest(".term"); if (b && matchMedia("(hover: hover)").matches) place(b); });
+      ul.addEventListener("mouseout", e => { const b = e.target.closest(".term"); if (b && matchMedia("(hover: hover)").matches && !b.contains(e.relatedTarget)) hide(); });
+      ul.addEventListener("focusin", e => { const b = e.target.closest(".term"); if (b) place(b); });
+      ul.addEventListener("focusout", hide);
+      ul.addEventListener("pointerdown", e => { const b = e.target.closest(".term"); wasOpen = !!b && openBtn === b; });
+      ul.addEventListener("click", e => { const b = e.target.closest(".term"); if (!b) return; e.stopPropagation(); if (wasOpen && !matchMedia("(hover: hover)").matches) hide(); else { place(b); tip.scrollIntoView({ block: "nearest", behavior: "smooth" }); } wasOpen = false; });
+    });
+    document.addEventListener("click", e => { if (!e.target.closest(".term")) hide(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") hide(); });
+    window.addEventListener("resize", hide);
+  }
 
   // ---------- hover / tap on the arc: show the time and what period it falls in ----------
   function setupArcHover() {
@@ -291,6 +363,7 @@
   document.addEventListener("keydown", e => { if (e.key === "Escape" && !viewer.hidden) closeViewer(); });
 
   setupArcHover();
+  setupMeanings();
   lang = pick();
   render();
   clearInterval(timer);

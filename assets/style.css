@@ -14,7 +14,7 @@
   --saffron:#D9731A;    /* good times */
   --gold:#B8862E;       /* the sun, rules */
   --line:#E2CFAE;
-  --body:"Inter",system-ui,sans-serif;
+  --body:"Inter","Noto Sans Telugu","Noto Sans Tamil",system-ui,sans-serif;
   --display:"Marcellus",Georgia,serif;
 }
 html[lang=te]{--body:"Noto Sans Telugu","Inter",sans-serif}
@@ -173,3 +173,14 @@ footer nav{display:flex;gap:20px}
 .tt-row span{position:absolute;left:0;top:6px;width:9px;height:9px;border-radius:50%;background:var(--saffron)}
 .tt-row.bad span{background:var(--maroon)}
 .tt-row.none{padding-left:0}
+
+/* period meanings */
+.lists button.term{all:unset;display:inline-flex;align-items:center;gap:7px;color:var(--muted);cursor:help;border-bottom:1px dotted #B79A84;line-height:1.35}
+.lists button.term svg{width:15px;height:15px;color:#B08968;flex:none}
+.lists button.term:hover,.lists button.term:focus-visible{color:var(--maroon);border-bottom-color:var(--maroon)}
+.lists button.term:hover svg,.lists button.term:focus-visible svg{color:var(--maroon)}
+.lists button.term:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:4px}
+.deftip{position:absolute;z-index:40;max-width:340px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px rgba(107,30,46,.18);padding:12px 15px;font-size:14.5px;line-height:1.55;color:var(--ink)}
+.deftip[hidden]{display:none}
+.deftip b{display:block;color:var(--maroon);margin-bottom:3px;font-size:15px}
+@media (max-width:520px){.deftip{max-width:calc(100vw - 24px)}}
