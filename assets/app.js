@@ -12,7 +12,7 @@
       how: "How the times are worked out",
       how1: "Every time is calculated from the real positions of the sun and moon for the city shown, using the Lahiri ayanamsa that most Indian almanacs follow. Each day's figures are checked against standard printed panchangams.",
       how2: "Rahu kalam, Yamagandam and Gulika come from the length of the day between sunrise and sunset, so they shift a little every day and from city to city. For a wedding, griha pravesham or other important event, confirm the muhurtham with your family priest.",
-      privacy: "Privacy", terms: "Terms", meanings: "Meanings",
+      privacy: "Privacy", terms: "Terms", meanings: "Meanings", stotrams: "Stotrams with meaning", stotramsNav: "Stotrams",
       fullLead: c => `All times are Indian Standard Time for ${c}.`,
       now: "Now", nowGood: "Good time now", until: "until", next: "Next", from: "from",
       clear: "No time to avoid right now.", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
@@ -29,7 +29,7 @@
       how: "సమయాలు ఎలా లెక్కిస్తాం",
       how1: "ప్రతి సమయాన్ని ఆ నగరానికి సూర్య చంద్రుల అసలు స్థానాల నుండి, చాలా పంచాంగాలు అనుసరించే లాహిరి అయనాంశతో లెక్కిస్తాం. ప్రతి రోజు వివరాలను ప్రామాణిక పంచాంగాలతో సరిచూస్తాం.",
       how2: "రాహుకాలం, యమగండం, గుళిక కాలం సూర్యోదయం నుండి సూర్యాస్తమయం వరకు ఉన్న పగటి నిడివి మీద ఆధారపడతాయి, అందుకే రోజుకీ నగరానికీ కొద్దిగా మారుతాయి. పెళ్ళి, గృహప్రవేశం వంటి ముఖ్యమైన కార్యాలకు ముహూర్తాన్ని మీ పురోహితుల దగ్గర నిర్ధారించుకోండి.",
-      privacy: "గోప్యత", terms: "నిబంధనలు", meanings: "అర్థాలు",
+      privacy: "గోప్యత", terms: "నిబంధనలు", meanings: "అర్థాలు", stotrams: "అర్థంతో స్తోత్రాలు", stotramsNav: "స్తోత్రాలు",
       fullLead: c => `అన్ని సమయాలు ${c} భారత కాలమానం ప్రకారం.`,
       now: "ఇప్పుడు", nowGood: "ఇప్పుడు శుభ సమయం", until: "వరకు", next: "తదుపరి", from: "నుండి",
       clear: "ఇప్పుడు వర్జించవలసిన సమయం లేదు.", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
@@ -46,7 +46,7 @@
       how: "நேரங்கள் எப்படி கணக்கிடப்படுகின்றன",
       how1: "ஒவ்வொரு நேரமும் அந்த நகரத்திற்கான சூரியன், சந்திரன் உண்மையான நிலைகளிலிருந்து, பெரும்பாலான பஞ்சாங்கங்கள் பின்பற்றும் லாஹிரி அயனாம்சத்துடன் கணக்கிடப்படுகிறது. தினசரி விவரங்கள் நிலையான பஞ்சாங்கங்களுடன் சரிபார்க்கப்படுகின்றன.",
       how2: "ராகு காலம், எமகண்டம், குளிகை ஆகியவை சூரிய உதயம் முதல் அஸ்தமனம் வரையிலான பகல் நேரத்தைப் பொறுத்தவை, எனவே நாளுக்கு நாள், ஊருக்கு ஊர் சற்று மாறும். திருமணம், கிரகப்பிரவேசம் போன்ற முக்கிய நிகழ்வுகளுக்கு முகூர்த்தத்தை உங்கள் குடும்ப புரோகிதரிடம் உறுதி செய்துகொள்ளுங்கள்.",
-      privacy: "தனியுரிமை", terms: "விதிமுறைகள்", meanings: "விளக்கங்கள்",
+      privacy: "தனியுரிமை", terms: "விதிமுறைகள்", meanings: "விளக்கங்கள்", stotrams: "பொருளுடன் ஸ்தோத்திரங்கள்", stotramsNav: "ஸ்தோத்திரங்கள்",
       fullLead: c => `எல்லா நேரங்களும் ${c} இந்திய நேரப்படி.`,
       now: "இப்போது", nowGood: "இப்போது நல்ல நேரம்", until: "வரை", next: "அடுத்து", from: "முதல்",
       clear: "இப்போது தவிர்க்க வேண்டிய நேரம் இல்லை.", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
@@ -88,9 +88,9 @@
   const CITY = { te: "hyderabad", en: "hyderabad", ta: "chennai" };
   const cityOf = l => document.documentElement.dataset.city || CITY[l];
   const LINKS = {
-    te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu"],
-    ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil"],
-    en: ["https://t.me/panchangika_en", "https://www.youtube.com/@Panchangika"],
+    te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu", "https://www.instagram.com/panchangika.telugu/", "/te/stotrams/"],
+    ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil", "https://www.instagram.com/panchangika.tamil/", "/ta/stotrams/"],
+    en: ["https://t.me/panchangika_en", "https://www.youtube.com/@Panchangika", "https://www.instagram.com/panchangika.in/", "/stotrams/"],
   };
 
   const $ = id => document.getElementById(id);
@@ -259,6 +259,9 @@
     document.querySelectorAll("[data-t]").forEach(el => { const v = t[el.dataset.t]; if (typeof v === "string") el.textContent = v; });
     document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.l === lang)));
     $("cta-tg").href = LINKS[lang][0]; $("cta-yt").href = LINKS[lang][1];
+    if ($("cta-ig")) $("cta-ig").href = LINKS[lang][2];
+    if ($("cta-st")) $("cta-st").href = LINKS[lang][3];
+    if ($("nav-st")) $("nav-st").href = LINKS[lang][3];
     const mine = ++seq;
     try {
       N = N || await json("/data/names.json");
