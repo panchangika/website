@@ -5,7 +5,7 @@
     en: {
       title: "Know today's good hours before you step out.",
       lead: "A free daily panchangam in Telugu, Tamil and English. Tithi, nakshatra, Rahu kalam and the good times of the day, on your phone by 5 am.",
-      join: "Join on Telegram", watch: "Watch on YouTube", follow: "Follow on Instagram",
+      join: "Join on Telegram", watch: "Watch on YouTube", follow: "Follow on Instagram", wa: "Follow on WhatsApp",
       full: "Today in full", get: "Get it every morning",
       getLead: "Pick your language. The card comes at the same time every day, free.",
       cityTe: "Times for Hyderabad", cityTa: "Times for Chennai", cityEn: "Times for Hyderabad",
@@ -22,7 +22,7 @@
     te: {
       title: "బయటికి వెళ్ళే ముందు నేటి శుభ సమయం తెలుసుకోండి.",
       lead: "తెలుగు, తమిళం, ఇంగ్లీష్‌లో ప్రతి రోజు ఉచిత పంచాంగం. తిథి, నక్షత్రం, రాహుకాలం, శుభ సమయాలు ఉదయం 5 గంటలకల్లా మీ ఫోన్‌లో.",
-      join: "Telegram లో చేరండి", watch: "YouTube లో చూడండి", follow: "Instagram లో ఫాలో అవ్వండి",
+      join: "Telegram లో చేరండి", watch: "YouTube లో చూడండి", follow: "Instagram లో ఫాలో అవ్వండి", wa: "WhatsApp లో ఫాలో అవ్వండి",
       full: "నేటి పూర్తి పంచాంగం", get: "ప్రతి ఉదయం మీ ఫోన్‌కి",
       getLead: "మీ భాషను ఎంచుకోండి. ప్రతి రోజు అదే సమయానికి, ఉచితంగా.",
       cityTe: "హైదరాబాద్ సమయాలు", cityTa: "చెన్నై సమయాలు", cityEn: "హైదరాబాద్ సమయాలు",
@@ -39,7 +39,7 @@
     ta: {
       title: "வெளியே கிளம்பும் முன் இன்றைய நல்ல நேரத்தை அறிந்துகொள்ளுங்கள்.",
       lead: "தமிழ், தெலுங்கு, ஆங்கிலத்தில் தினசரி இலவச பஞ்சாங்கம். திதி, நட்சத்திரம், ராகு காலம், கௌரி நல்ல நேரம் காலை 5 மணிக்குள் உங்கள் போனில்.",
-      join: "Telegram-இல் சேருங்கள்", watch: "YouTube-இல் பாருங்கள்", follow: "Instagram-இல் பின்தொடருங்கள்",
+      join: "Telegram-இல் சேருங்கள்", watch: "YouTube-இல் பாருங்கள்", follow: "Instagram-இல் பின்தொடருங்கள்", wa: "WhatsApp-இல் பின்தொடருங்கள்",
       full: "இன்றைய முழு பஞ்சாங்கம்", get: "ஒவ்வொரு காலையும் உங்கள் போனுக்கு",
       getLead: "உங்கள் மொழியைத் தேர்ந்தெடுங்கள். தினமும் அதே நேரத்தில், இலவசமாக.",
       cityTe: "ஹைதராபாத் நேரப்படி", cityTa: "சென்னை நேரப்படி", cityEn: "ஹைதராபாத் நேரப்படி",
@@ -88,9 +88,9 @@
   const CITY = { te: "hyderabad", en: "hyderabad", ta: "chennai" };
   const cityOf = l => document.documentElement.dataset.city || CITY[l];
   const LINKS = {
-    te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu", "https://www.instagram.com/panchangika.telugu/", "/te/stotrams/"],
-    ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil", "https://www.instagram.com/panchangika.tamil/", "/ta/stotrams/"],
-    en: ["https://t.me/panchangika_en", "https://www.youtube.com/@Panchangika", "https://www.instagram.com/panchangika.in/", "/stotrams/"],
+    te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu", "https://www.instagram.com/panchangika.telugu/", "/te/stotrams/", "https://whatsapp.com/channel/0029Vb9rGqR8fewtWX36kT3n"],
+    ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil", "https://www.instagram.com/panchangika.tamil/", "/ta/stotrams/", "https://whatsapp.com/channel/0029VbDjBHEBfxo65RFk7V47"],
+    en: ["https://t.me/panchangika_en", "https://www.youtube.com/@Panchangika", "https://www.instagram.com/panchangika.in/", "/stotrams/", "https://whatsapp.com/channel/0029VbED6csKQuJRkevtPc3c"],
   };
 
   const $ = id => document.getElementById(id);
@@ -260,6 +260,7 @@
     document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.l === lang)));
     $("cta-tg").href = LINKS[lang][0]; $("cta-yt").href = LINKS[lang][1];
     if ($("cta-ig")) $("cta-ig").href = LINKS[lang][2];
+    if ($("cta-wa")) $("cta-wa").href = LINKS[lang][4];
     if ($("cta-st")) $("cta-st").href = LINKS[lang][3];
     if ($("nav-st")) $("nav-st").href = LINKS[lang][3];
     const mine = ++seq;
