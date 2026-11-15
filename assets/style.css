@@ -186,3 +186,13 @@ footer nav{display:flex;gap:20px}
 .deftip[hidden]{display:none}
 .deftip b{display:block;color:var(--maroon);margin-bottom:3px;font-size:15px}
 @media (max-width:520px){.deftip{max-width:calc(100vw - 24px)}}
+
+/* Printing is not offered: the printed page shows only a short notice. */
+@media print {
+  body > * { display: none !important; }
+  body::after {
+    content: "Printing is not available. Please visit panchangika.in for today's panchangam.";
+    display: block; margin-top: 35vh; text-align: center;
+    font: 16pt sans-serif; color: #6B1E2E;
+  }
+}
