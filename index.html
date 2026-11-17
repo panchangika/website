@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="en" data-lang="en" class="can-print">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +21,7 @@
 <meta name="theme-color" content="#FBF5EA">
 <link rel="icon" href="/assets/favicon.png">
 <link rel="preload" href="/assets/fonts/Marcellus-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=1117a">
+<link rel="stylesheet" href="/assets/style.css?v=1117b">
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bdbdcb99692d49d28cac8dbd78056e08"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
@@ -61,6 +61,7 @@
       <svg class="arc" id="arc" viewBox="0 0 640 335" role="img" aria-labelledby="arc-desc"><desc id="arc-desc">The day from sunrise to sunset, with the times to avoid and the good times marked along the path of the sun. Hover or tap the arc to see the time and period.</desc></svg>
       <div class="arctip" id="arctip" hidden></div>
       <p class="ends" id="ends"></p>
+      <p class="legend"><span><i class="lg-good"></i><span data-t="lgGood">Good time</span></span><span><i class="lg-rahu"></i><span data-t="lgRahu">Rahu Kalam</span></span><span><i class="lg-soft"></i><span data-t="lgSoft">Other times to avoid</span></span></p>
       <p class="status" id="status"></p>
       <dl class="limbs" id="limbs"><dt>Tithi</dt><dd><b>Ashtami</b> until 6:06 AM (+1), then Navami</dd><dt>Nakshatra</dt><dd><b>Dhanishta</b> until 4:35 AM (+1), then Shatabhisha</dd></dl>
     </div>
@@ -137,6 +138,6 @@
 
 <div class="deftip" id="deftip" role="tooltip" hidden></div>
 <div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-label="Sample card"><button type="button" id="viewer-close" aria-label="Close">×</button><img id="viewer-img" alt=""></div>
-<script src="/assets/app.js?v=1117a" defer></script>
+<script src="/assets/app.js?v=1117b" defer></script>
 </body>
 </html>
