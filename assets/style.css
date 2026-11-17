@@ -187,12 +187,75 @@ footer nav{display:flex;gap:20px}
 .deftip b{display:block;color:var(--maroon);margin-bottom:3px;font-size:15px}
 @media (max-width:520px){.deftip{max-width:calc(100vw - 24px)}}
 
-/* Printing is not offered: the printed page shows only a short notice. */
+/* Printing: only the daily panchangam home pages (html.can-print) print, as a clean one-page sheet.
+   Every other page prints a short notice instead. */
 @media print {
-  body > * { display: none !important; }
-  body::after {
+  html:not(.can-print) body > * { display: none !important; }
+  html:not(.can-print) body::after {
     content: "Printing is not available. Please visit panchangika.in for today's panchangam.";
     display: block; margin-top: 35vh; text-align: center;
     font: 16pt sans-serif; color: #6B1E2E;
   }
+  @page { margin: 12mm; }
+  html.can-print body { background: #fff; font-size: 11pt; }
+  html.can-print .top { padding: 0 0 6px !important; }
+  html.can-print .langs, html.can-print .cta, html.can-print #cta-cal, html.can-print #cta-st,
+  html.can-print .hero h1, html.can-print .hero .lead, html.can-print .get, html.can-print .how,
+  html.can-print .deftip, html.can-print .arctip { display: none !important; }
+  html.can-print .hero { display: block !important; padding: 0; }
+  html.can-print .hero .day { border: 0 !important; padding: 0 !important; }
+  html.can-print .arc { max-width: 340px; display: block; margin: 0 auto; }
+  html.can-print .status { min-height: 0; font-size: 12pt; }
+  html.can-print footer { display: none !important; }
+  html.can-print main section, html.can-print .hero, html.can-print .full { padding: 0 !important; margin: 0 0 8px !important; min-height: 0 !important; }
+  html.can-print .full h2 { margin: 8px 0 4px; font-size: 18pt; }
+  html.can-print .lists li { padding: 3px 0; }
+  html.can-print main { zoom: .82; }
+  html.can-print .day { break-inside: avoid; }
+  html.can-print body::after { content: "Panchangika · free daily panchangam · panchangika.in"; display: block;
+    text-align: center; font: 11pt sans-serif; color: #6B1E2E; margin-top: 10px; }
 }
+
+/* ---- 17 Nov design fixes (design review) ---- */
+/* stop sideways scrolling on phones */
+html,body{overflow-x:clip}
+.hero h1,.legal h1,h2{overflow-wrap:anywhere}
+footer nav{display:flex;flex-wrap:wrap;gap:0 18px}
+/* panchangam first on phones */
+@media (max-width:900px){
+  .hero{display:flex;flex-direction:column;grid-template-columns:minmax(0,1fr)}
+  .hero > div{min-width:0}
+  .hero .day{order:-1;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 14px}
+}
+/* calmer follow buttons on phones */
+@media (max-width:520px){
+  .cta .btn{min-height:52px}
+  .cta .btn.ghost{min-height:48px;font-size:15px}
+}
+/* tap targets >= 44px */
+.langs button{min-height:44px;padding:10px 14px}
+footer a{display:inline-block;padding:11px 0}
+.lists button.term{min-height:44px}
+.legal .updated a{display:inline-block;padding:10px 4px}
+/* readability for elders */
+@media (max-width:520px){ body{font-size:17px} .ends{font-size:15px} .day .sub{font-size:16px} }
+.status{font-size:19px;font-weight:500;min-height:2.8em}
+.arc{aspect-ratio:640/335}
+/* arc colour key */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin:6px 0 0;font-size:15px;color:var(--muted)}
+.legend > span{display:inline-flex;align-items:center;gap:7px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:50%}
+.legend .lg-good{background:var(--saffron)} .legend .lg-rahu{background:var(--maroon)} .legend .lg-soft{background:#9A5A57}
+/* Telugu / Tamil headings on inner pages: one font */
+html[lang=te] .legal h1,html[lang=ta] .legal h1,
+html[lang=te] .legal h2,html[lang=ta] .legal h2{font-family:var(--body);font-weight:700;line-height:1.35}
+html[lang=te] .legal h1,html[lang=ta] .legal h1{font-size:clamp(28px,6vw,40px)}
+/* stotram verses easier to read */
+.verse .tx{font-size:1.35em;line-height:1.9}
+.lists li{align-items:center}
+html[lang=ta] .hero h1{font-size:clamp(26px,3.6vw,40px)}
+@media print{
+  html.can-print .lists button.term{min-height:0}
+  html.can-print .ends,html.can-print .legend{max-width:340px;margin-left:auto;margin-right:auto}
+}
+.lists li span:last-child{white-space:nowrap}
