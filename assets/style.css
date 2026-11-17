@@ -258,4 +258,111 @@ html[lang=ta] .hero h1{font-size:clamp(26px,3.6vw,40px)}
   html.can-print .lists button.term{min-height:0}
   html.can-print .ends,html.can-print .legend{max-width:340px;margin-left:auto;margin-right:auto}
 }
-.lists li span:last-child{white-space:nowrap}
+html[lang=en] .lists li span:last-child{white-space:nowrap}
+
+/* ===== New home page (17 Nov): almanac sheet + angas + hour-by-hour timeline ===== */
+.home{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding:8px 0 40px}
+.home .intro h1{font:400 clamp(26px,3.4vw,40px)/1.15 var(--display);color:var(--maroon);margin:4px 0 6px}
+.home .intro .lead{font-size:16px;color:var(--muted);margin:0;max-width:40em}
+html[lang=te] .home .intro h1,html[lang=ta] .home .intro h1{font-family:var(--body);font-weight:700;font-size:clamp(22px,3vw,32px);line-height:1.35}
+.sheet{background:var(--maroon);border-radius:22px;padding:6px;color:#FBF5EA}
+.sheet-in{border:1.5px solid #C9A04E;border-radius:17px;padding:18px 16px 20px;text-align:center}
+.sheet .dots{display:flex;gap:6px;justify-content:center;margin-bottom:6px}
+.sheet .dots i{width:5px;height:5px;border-radius:50%;background:#C9A04E}
+.sheet .date{margin:0;display:flex;flex-direction:column;align-items:center}
+.sheet .date .wd{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#E9CF95;font-weight:600}
+.sheet .date .dn{font:400 92px/1 var(--display);color:#F2C66D;margin:2px 0}
+.sheet .date .mo{font:400 24px/1.2 var(--display)}
+html[lang=te] .sheet .date .mo,html[lang=ta] .sheet .date .mo{font-family:var(--body);font-weight:600;font-size:20px}
+html[lang=te] .sheet .date .wd,html[lang=ta] .sheet .date .wd{letter-spacing:.02em;font-size:15px}
+.sheet .sub{margin:14px auto 0;padding-top:12px;border-top:1px solid #8E4A55;max-width:80%;font-size:15px;line-height:1.55;color:#F3E3CF}
+.sheet .cityline{display:inline-block;margin:12px 0 0;padding:8px 16px;border-radius:999px;background:#7E2F3D;font-size:14px;font-weight:600}
+.angas h2,.dayline h2,.yt h2{font:400 24px/1.2 var(--display);margin:0 0 10px;color:var(--maroon)}
+html[lang=te] .angas h2,html[lang=ta] .angas h2,html[lang=te] .dayline h2,html[lang=ta] .dayline h2,html[lang=te] .yt h2,html[lang=ta] .yt h2{font-family:var(--body);font-weight:700;font-size:21px}
+.angas .limbs{margin:0;max-width:none;width:100%;box-sizing:border-box;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:block}
+.angas .limbs > div{display:grid;grid-template-columns:104px minmax(0,1fr);border-bottom:1px solid #F0E4D0}
+.angas .limbs > div:last-child{border-bottom:0}
+.angas .limbs dt{margin:0;padding:13px 8px 13px 16px;font-size:14px;color:var(--muted);background:#FBF3E6}
+.angas .limbs dd{margin:0;padding:11px 14px}
+.angas .limbs dd b{font-size:17px}
+.angas .limbs dd span{display:block;font-size:14px;color:var(--muted)}
+.angas .limbs dd span b{font-size:15px;color:var(--ink)}
+.dayline{background:var(--maroon);border-radius:22px;padding:6px}
+.dayline-in{border:1.5px solid #C9A04E;border-radius:17px;padding:18px 16px 16px}
+.dayline h2{color:#F2C66D}
+.dayline .dl-sub{margin:-4px 0 16px;font-size:14px;color:#E9CF95}
+.dayline .status{display:none}
+.timeline{list-style:none;margin:0;padding:0 0 0 26px;position:relative}
+.timeline::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:#8E4A55}
+.timeline li{position:relative;padding:0 0 16px;display:flex;flex-direction:column}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-24px;top:4px;width:14px;height:14px;border-radius:50%;box-sizing:border-box;border:2px solid var(--maroon);background:#C98A84}
+.timeline .tm{font-size:14px;font-weight:600;color:#E9CF95;font-variant-numeric:tabular-nums}
+.timeline .nm{font-size:16px;font-weight:600;color:#FFF6EA}
+.timeline .nm i{font-style:normal;font-weight:400;color:#E7C9C1}
+.timeline .good::before{background:#F2A541}
+.timeline .good .tm,.timeline .good .nm i{color:#F2C66D}
+.timeline .sun::before{background:#F2C66D}
+.timeline .main::before{background:#fff}
+.timeline .main .tm{color:#fff}
+.timeline .past{opacity:.8}
+.timeline .cur .nm{text-decoration:underline;text-decoration-color:#F2C66D;text-underline-offset:4px}
+.timeline .now{margin:0 0 16px;padding:10px 12px;background:#FBF5EA;border-radius:14px}
+.timeline .now:last-child{margin-bottom:0}
+.timeline .now::before{left:-27px;top:12px;width:20px;height:20px;border:3px solid var(--maroon);background:#F2C66D}
+.timeline .now .tm{color:var(--maroon);font-weight:700}
+.timeline .now .nm{color:#4A3A30;font-weight:500;font-size:15px}
+.timeline .now.bad .nm b{color:var(--maroon)}
+.timeline .now.good .nm b{color:#A04E0C}
+.seeall{display:inline-flex;align-items:center;min-height:44px;margin:4px 4px 0;font-weight:600;color:var(--maroon)}
+.yt{background:#F3E6CF;border-radius:22px;padding:18px}
+.yt p{margin:0 0 14px;font-size:15px;color:var(--muted)}
+.yt .btn.primary{display:flex;justify-content:center;min-height:52px;width:100%;box-sizing:border-box}
+.yt .also{margin:12px 0 0;text-align:center;font-size:14px}
+.yt .also-links{margin:0;display:flex;justify-content:center;flex-wrap:wrap;gap:0 20px}
+.yt .also-links a{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;color:var(--maroon);text-decoration:none}
+.yt .also-links svg{width:18px;height:18px}
+.promos{display:flex;flex-direction:column;gap:12px}
+.promo{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;text-decoration:none;color:var(--ink)}
+.promo .pic{flex:none;width:52px;height:52px;border-radius:50%;background:#FDEBD3;display:flex;align-items:center;justify-content:center}
+.promo .pic svg{width:26px;height:26px;fill:none;stroke:#A04E0C;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.promo .pic.cal{background:#F3E6CF}.promo .pic.cal svg{stroke:var(--maroon)}
+.promo .pic.book{border-radius:8px;width:52px;height:64px;background:var(--maroon);border:2px solid #C9A04E;font:400 15px var(--display);color:#F2C66D}
+.promo .txt{flex:1;display:flex;flex-direction:column}
+.promo .txt b{font-size:16px;color:var(--maroon)}
+.promo .txt span{font-size:14px;color:var(--muted)}
+.promo .go{color:var(--maroon);font-size:20px}
+.promo.soon{border:1.5px dashed #C9A04E}
+@media (min-width:900px){
+  .home{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;row-gap:22px;align-items:start}
+  .home .intro{grid-column:1/-1}
+  .sheet .date .dn{font-size:110px}
+}
+@media print{
+  html.can-print .home .intro,html.can-print .yt,html.can-print .promos,html.can-print .seeall{display:none!important}
+  html.can-print .home{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;padding:0}
+  html.can-print .timeline .now{display:none!important}
+  html.can-print .sheet .date .dn{font-size:56px}
+  html.can-print .sheet-in,html.can-print .dayline-in{padding:10px 12px}
+  html.can-print .timeline li{padding-bottom:7px}
+  html.can-print .angas .limbs dd,html.can-print .angas .limbs dt{padding-top:6px;padding-bottom:6px}
+  html.can-print .sheet,html.can-print .dayline{background:#fff!important;color:#2B1A14}
+  html.can-print .sheet-in,html.can-print .dayline-in{border-color:#6B1E2E}
+  html.can-print .sheet .date .dn,html.can-print .dayline h2{color:#6B1E2E}
+  html.can-print .sheet .date .wd,html.can-print .sheet .sub,html.can-print .dayline .dl-sub{color:#4A3A30}
+  html.can-print .sheet .cityline{background:none;color:#2B1A14}
+  html.can-print .timeline .tm,html.can-print .timeline .nm,html.can-print .timeline .nm i{color:#2B1A14!important}
+  html.can-print .timeline .now{border:1px solid #6B1E2E}
+  html.can-print .timeline .past{opacity:1}
+  html.can-print .full{display:none!important}
+  html.can-print .angas,html.can-print .sheet{break-inside:avoid;margin-bottom:8px}
+}
+
+.col-a{display:flex;flex-direction:column;gap:22px}
+.angas h2{margin-top:0}
+@media (max-width:899px){
+  .home .intro{order:3}
+  .col-a{order:1}.col-b{order:2}.home .yt{order:4}.home .promos{order:5}
+  .sheet .date .dn{font-size:76px}
+  .sheet-in{padding:14px 14px 16px}
+}

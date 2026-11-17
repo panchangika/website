@@ -15,7 +15,7 @@
       privacy: "Privacy", terms: "Terms", meanings: "Meanings", stotrams: "Stotrams with meaning", stotramsSub: "Read daily prayers with their meaning", stotramsGo: "Open stotrams", lgGood: "Good time", lgRahu: "Rahu Kalam", lgSoft: "Other times to avoid", stotramsNav: "Stotrams",
       fullLead: c => `All times are Indian Standard Time for ${c}.`,
       now: "Now", nowGood: "Good time now", until: "until", next: "Next", from: "from",
-      clear: "Clear for now.", nextAvoid: "Next to avoid", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
+      angas: "Today's panchangam", hour: "Your day, hour by hour", dlSub: c => `Sunrise to sunset · ${c}`, timesFor: c => `Times for ${c}`, sunRow: "Sun", tagGood: "good", tagAvoid: "avoid", clearShort: "Clear time", ytTitle: "Watch every day on YouTube", ytLead: "Today's panchangam, festival specials and short explainers · free", dailyOn: "Daily card by 5 am on", seeAll: "See all times, with meanings", evTitle: "Plan an event", evSub: "Muhurtam for griha pravesham, wedding, vehicle · coming soon", samv: s => `${s} nama samvatsaram`, masa: m => `${m} masa`, clear: "Clear for now.", nextAvoid: "Next to avoid", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
       before: "Before sunrise.", city: { hyderabad: "Hyderabad", chennai: "Chennai" },
       noData: "Today's panchangam will be back shortly.", noPeriod: "No special period at this time",
     },
@@ -32,7 +32,7 @@
       privacy: "గోప్యత", terms: "నిబంధనలు", meanings: "అర్థాలు", stotrams: "అర్థంతో స్తోత్రాలు", stotramsSub: "రోజువారీ ప్రార్థనలను వాటి అర్థంతో చదవండి", stotramsGo: "స్తోత్రాలు చూడండి", lgGood: "శుభ సమయం", lgRahu: "రాహుకాలం", lgSoft: "ఇతర అశుభ సమయాలు", stotramsNav: "స్తోత్రాలు",
       fullLead: c => `అన్ని సమయాలు ${c} భారత కాలమానం ప్రకారం.`,
       now: "ఇప్పుడు", nowGood: "ఇప్పుడు శుభ సమయం", until: "వరకు", next: "తదుపరి", from: "నుండి",
-      clear: "ప్రస్తుతానికి వర్జించవలసిన సమయం లేదు.", nextAvoid: "తదుపరి అశుభ సమయం", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
+      angas: "నేటి పంచాంగం", hour: "మీ రోజు, గంట గంటకు", dlSub: c => `సూర్యోదయం నుండి సూర్యాస్తమయం వరకు · ${c}`, timesFor: c => `${c} సమయాలు`, sunRow: "సూర్యుడు", tagGood: "శుభం", tagAvoid: "అశుభం", clearShort: "వర్జించవలసిన సమయం లేదు", ytTitle: "ప్రతి రోజు YouTube లో చూడండి", ytLead: "నేటి పంచాంగం, పండుగ ప్రత్యేకాలు, చిన్న వివరణ వీడియోలు · ఉచితం", dailyOn: "రోజువారీ కార్డు ఉదయం 5 గంటలకల్లా:", seeAll: "అన్ని సమయాలు, వాటి అర్థాలతో", evTitle: "శుభ కార్యానికి ముహూర్తం", evSub: "గృహప్రవేశం, వివాహం, వాహనం · త్వరలో", samv: s => `${s} నామ సంవత్సరం`, masa: m => m, clear: "ప్రస్తుతానికి వర్జించవలసిన సమయం లేదు.", nextAvoid: "తదుపరి అశుభ సమయం", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
       before: "ఇంకా సూర్యోదయం కాలేదు.", city: { hyderabad: "హైదరాబాద్", chennai: "చెన్నై" },
       noData: "నేటి పంచాంగం త్వరలో వస్తుంది.", noPeriod: "ఈ సమయంలో ప్రత్యేక కాలం లేదు",
     },
@@ -49,7 +49,7 @@
       privacy: "தனியுரிமை", terms: "விதிமுறைகள்", meanings: "விளக்கங்கள்", stotrams: "பொருளுடன் ஸ்தோத்திரங்கள்", stotramsSub: "தினசரி பிரார்த்தனைகளை அவற்றின் பொருளுடன் படியுங்கள்", stotramsGo: "ஸ்தோத்திரங்களைப் பாருங்கள்", lgGood: "நல்ல நேரம்", lgRahu: "ராகு காலம்", lgSoft: "தவிர்க்க வேண்டிய பிற நேரங்கள்", stotramsNav: "ஸ்தோத்திரங்கள்",
       fullLead: c => `எல்லா நேரங்களும் ${c} இந்திய நேரப்படி.`,
       now: "இப்போது", nowGood: "இப்போது நல்ல நேரம்", until: "வரை", next: "அடுத்து", from: "முதல்",
-      clear: "இப்போதைக்கு தவிர்க்க வேண்டிய நேரம் இல்லை.", nextAvoid: "அடுத்து தவிர்க்க வேண்டியது", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
+      angas: "இன்றைய பஞ்சாங்கம்", hour: "உங்கள் நாள், மணி வாரியாக", dlSub: c => `சூரிய உதயம் முதல் அஸ்தமனம் வரை · ${c}`, timesFor: c => `${c} நேரம்`, sunRow: "சூரியன்", tagGood: "நல்லது", tagAvoid: "தவிர்க்கவும்", clearShort: "தவிர்க்க வேண்டிய நேரம் இல்லை", ytTitle: "தினமும் YouTube-இல் பாருங்கள்", ytLead: "இன்றைய பஞ்சாங்கம், பண்டிகை சிறப்புகள், சிறு விளக்க வீடியோக்கள் · இலவசம்", dailyOn: "தினசரி அட்டை காலை 5 மணிக்குள்:", seeAll: "அனைத்து நேரங்களும், விளக்கங்களுடன்", evTitle: "சுப காரியத்துக்கு முகூர்த்தம்", evSub: "கிரகப்பிரவேசம், திருமணம், வாகனம் · விரைவில்", samv: s => `${s} வருடம்`, masa: m => m, clear: "இப்போதைக்கு தவிர்க்க வேண்டிய நேரம் இல்லை.", nextAvoid: "அடுத்து தவிர்க்க வேண்டியது", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
       before: "இன்னும் சூரிய உதயம் ஆகவில்லை.", city: { hyderabad: "ஹைதராபாத்", chennai: "சென்னை" },
       noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.", noPeriod: "இந்த நேரத்தில் தனி காலம் இல்லை",
     },
@@ -152,51 +152,6 @@
     return { good, avoid };
   }
 
-  // ---------- the arc ----------
-  const CX = 320, CY = 318, R = 270;
-  function pt(f) { const a = Math.PI * (1 - f); return [CX + R * Math.cos(a), CY - R * Math.sin(a)]; }
-  function arcPath(f0, f1) {
-    f0 = Math.max(0, Math.min(1, f0)); f1 = Math.max(0, Math.min(1, f1));
-    const [x0, y0] = pt(f0), [x1, y1] = pt(f1);
-    return `M${x0.toFixed(1)} ${y0.toFixed(1)} A${R} ${R} 0 0 1 ${x1.toFixed(1)} ${y1.toFixed(1)}`;
-  }
-
-  function drawArc(D, W, now) {
-    const svg = $("arc");
-    const L = N.LABEL[lang];
-    const len = D.ss - D.sr, f = m => (m - D.sr) / len;
-    const ns = "http://www.w3.org/2000/svg";
-    svg.querySelectorAll(":scope > :not(desc)").forEach(n => n.remove());
-    const add = (tag, attrs, parent = svg) => {
-      const el = document.createElementNS(ns, tag);
-      for (const k in attrs) el.setAttribute(k, attrs[k]);
-      parent.appendChild(el); return el;
-    };
-    add("line", { class: "horizon", x1: 10, y1: CY, x2: 630, y2: CY });
-    const track = add("path", { class: "track", d: arcPath(0, 1) });
-    const segs = [];
-    W.avoid.forEach(o => { if (o.w[1] > D.sr && o.w[0] < D.ss) segs.push(add("path", { class: "seg avoid" + (o.main ? "" : " soft"), d: arcPath(f(o.w[0]), f(o.w[1])) })); });
-    W.good.forEach(o => { if (o.w[1] > D.sr && o.w[0] < D.ss) segs.push(add("path", { class: "seg good", d: arcPath(f(o.w[0]), f(o.w[1])) })); });
-    // Rahu label above its band
-    const rf = (Math.max(D.rahu[0], D.sr) + Math.min(D.rahu[1], D.ss)) / 2;
-    const [rx, ry] = (() => { const a = Math.PI * (1 - f(rf)); return [CX + (R - 40) * Math.cos(a), CY - (R - 40) * Math.sin(a)]; })();
-    const rpos = f(rf), anchor = rpos > 0.6 ? "end" : rpos < 0.4 ? "start" : "middle";
-    const rdx = 0;
-    add("text", { class: "tick", x: rx + rdx, y: ry + 5, "text-anchor": anchor }).textContent = L.rahu;
-    $("ends").innerHTML = `<span>${L.sunrise} <b>${fmt(D.sr)}</b></span><span>${L.sunset} <b>${fmt(D.ss)}</b></span>`;
-    if (now >= D.sr && now <= D.ss) {
-      const [sx, sy] = pt(f(now));
-      const g = add("g", { class: "sunwrap" });
-      add("circle", { class: "halo", cx: sx, cy: sy, r: 28 }, g);
-      add("circle", { class: "sun", cx: sx, cy: sy, r: 13 }, g);
-    }
-    if (firstDraw) {
-      [track, ...segs].forEach(p => p.style.setProperty("--len", Math.ceil(p.getTotalLength()) + 1));
-      svg.classList.add("draw");
-      firstDraw = false;
-    } else svg.classList.remove("draw");
-  }
-
   function status(D, W, now) {
     const t = UI[lang], el = $("status");
     el.className = "status";
@@ -211,31 +166,66 @@
   }
 
   function header(D) {
+    const t = UI[lang];
     const d = new Date(D.d + "T00:00:00Z");
     const day = d.getUTCDate(), mon = N.GREG_MONTH[lang][d.getUTCMonth()], yr = d.getUTCFullYear();
     const wd = N.VAARA[lang][D.w];
     const paksha = N.PAKSHA[lang][Math.floor(D.t[0][0] / 15)];
-    if (lang === "ta") {
-      $("date").textContent = `${N.TAMIL_MONTH.ta[D.tm]} ${D.td}, ${wd}`;
-      $("sub").textContent = `${day} ${mon} ${yr}, ${paksha}`;
-    } else if (lang === "te") {
-      $("date").textContent = `${day} ${mon} ${yr}, ${wd}`;
-      $("sub").textContent = `${(D.adh ? N.ADHIKA.te : "")}${N.LUNAR_MONTH.te[D.lm]}, ${paksha}`;
-    } else {
-      $("date").textContent = `${wd}, ${day} ${mon} ${yr}`;
-      $("sub").textContent = `${(D.adh ? N.ADHIKA.en : "")}${N.LUNAR_MONTH.en[D.lm]} masa, ${paksha}`;
-    }
+    $("date").innerHTML = `<span class="wd">${wd}</span> <span class="dn">${day}</span> <span class="mo">${mon} ${yr}</span>`;
+    let l1, sv;
+    if (lang === "ta") { l1 = `${N.TAMIL_MONTH.ta[D.tm]} ${D.td} · ${paksha}`; sv = t.samv(N.SAMVATSARA.ta[D.sva]); }
+    else { l1 = `${(D.adh ? N.ADHIKA[lang] : "")}${t.masa(N.LUNAR_MONTH[lang][D.lm])} · ${paksha}`; sv = t.samv(N.SAMVATSARA[lang][D.svt]); }
+    $("sub").innerHTML = `${l1}<br>${sv}`;
+    $("cityline").textContent = t.timesFor(t.city[cityOf(lang)]);
   }
 
   function limbs(D) {
     const L = N.LABEL[lang], t = UI[lang];
     const row = (label, items, namer) => {
+      if (!items || !items.length) return "";
       const [i, e] = items[0], [j] = items[1] || [];
       const when = lang === "en" ? `${t.until} ${fmt(e)}` : `${fmt(e)} ${L.until}`;
-      const then = items[1] ? `, ${L.then} ${namer(j)}` : "";
-      return `<dt>${label}</dt><dd><b>${namer(i)}</b> ${when}${then}</dd>`;
+      const then = items[1] ? ` · ${L.then} ${namer(j)}` : "";
+      return `<div><dt>${label}</dt><dd><b>${namer(i)}</b> <span>${when}${then}</span></dd></div>`;
     };
-    $("limbs").innerHTML = row(L.tithi, D.t, tithiName) + row(L.nakshatra, D.n, i => N.NAKSHATRA[lang][i]);
+    $("limbs").innerHTML = row(L.tithi, D.t, tithiName) + row(L.nakshatra, D.n, i => N.NAKSHATRA[lang][i])
+      + (N.YOGA ? row(L.yoga, D.y, i => N.YOGA[lang][i]) : "") + (N.KARANA ? row(L.karana, D.k, i => N.KARANA[lang][i]) : "")
+      + `<div><dt>${t.sunRow}</dt><dd><span>${L.sunrise} <b>${fmt(D.sr)}</b> · ${L.sunset} <b>${fmt(D.ss)}</b></span></dd></div>`;
+  }
+
+  function timeline(D, W, now) {
+    const t = UI[lang], L = N.LABEL[lang];
+    $("dl-sub").textContent = t.dlSub(t.city[cityOf(lang)]);
+    const evs = [];
+    W.avoid.forEach(o => { if (o.w[1] > D.sr && o.w[0] < D.ss) evs.push({ ...o, bad: true }); });
+    W.good.forEach(o => { if (o.w[1] > D.sr && o.w[0] < D.ss) evs.push({ ...o, bad: false }); });
+    evs.sort((a, b) => a.w[0] - b.w[0]);
+    const tag = o => `<i>· ${o.bad ? t.tagAvoid : t.tagGood}</i>`;
+    const item = o => {
+      const cls = ["ev", o.bad ? "avoid" : "good"];
+      if (o.main) cls.push("main");
+      if (now >= o.w[1]) cls.push("past");
+      if (now >= o.w[0] && now < o.w[1]) cls.push("cur");
+      return `<li class="${cls.join(" ")}"><span class="tm">${span(o.w)}</span><span class="nm">${o.k} ${tag(o)}</span></li>`;
+    };
+    const inW = list => list.find(o => now >= o.w[0] && now < o.w[1]);
+    const bad = inW(W.avoid), good = inW(W.good);
+    let nowTxt;
+    if (bad) nowTxt = lang === "en" ? `<b>${bad.k}</b> ${t.until} ${fmt(bad.w[1])}` : `<b>${bad.k}</b> ${fmt(bad.w[1])} ${t.until}`;
+    else if (good) nowTxt = lang === "en" ? `<b>${good.k}</b> ${t.until} ${fmt(good.w[1])}` : `<b>${good.k}</b> ${fmt(good.w[1])} ${t.until}`;
+    else if (now < D.sr) nowTxt = t.before;
+    else if (now > D.ss) nowTxt = t.set;
+    else nowTxt = t.clearShort;
+    const nowCls = bad ? "now bad" : good ? "now good" : "now";
+    const nowLi = `<li class="${nowCls}"><span class="tm">${t.now} · ${fmt(now)}</span><span class="nm">${nowTxt}</span></li>`;
+    let html = `<li class="ev sun${now >= D.sr ? " past" : ""}"><span class="tm">${fmt(D.sr)}</span><span class="nm">${L.sunrise}</span></li>`;
+    let placed = now < D.sr;
+    if (placed) html = nowLi + html;
+    evs.forEach(o => { if (!placed && o.w[0] > now) { html += nowLi; placed = true; } html += item(o); });
+    if (!placed && now <= D.ss) { html += nowLi; placed = true; }
+    html += `<li class="ev sun"><span class="tm">${fmt(D.ss)}</span><span class="nm">${L.sunset}</span></li>`;
+    if (!placed) html += nowLi;
+    $("timeline").innerHTML = html;
   }
 
   function lists(D, W) {
@@ -270,12 +260,12 @@
       if (mine !== seq) return; // a newer render (language switch) has started
       const { iso, min } = istNow();
       const D = days.find(x => x.d === iso);
-      if (!D) { $("status").textContent = t.noData; return; }
+      if (!D) { $("status").textContent = t.noData; if ($("timeline")) $("timeline").innerHTML = `<li class="now"><span class="nm">${t.noData}</span></li>`; return; }
       const W = windows(D);
       current = { D, W };
-      header(D); drawArc(D, W, min); status(D, W, min); limbs(D); lists(D, W);
+      header(D); status(D, W, min); limbs(D); timeline(D, W, min); lists(D, W);
     } catch (e) {
-      $("status").textContent = t.noData;
+      $("status").textContent = t.noData; if ($("timeline")) $("timeline").innerHTML = `<li class="now"><span class="nm">${t.noData}</span></li>`;
     }
   }
 
@@ -327,35 +317,9 @@
   }
 
   // ---------- hover / tap on the arc: show the time and what period it falls in ----------
-  function setupArcHover() {
-    const svg = $("arc"), tip = $("arctip");
-    function show(evt) {
-      if (!current) return;
-      const { D, W } = current;
-      const pt0 = svg.createSVGPoint(); pt0.x = evt.clientX; pt0.y = evt.clientY;
-      const p = pt0.matrixTransform(svg.getScreenCTM().inverse());
-      const dx = p.x - CX, dy = CY - p.y, r = Math.hypot(dx, dy);
-      if (dy < -10 || r < R - 34 || r > R + 34) { tip.hidden = true; return; }
-      const f = Math.min(1, Math.max(0, 1 - Math.atan2(Math.max(dy, 0), dx) / Math.PI));
-      const m = Math.round(D.sr + f * (D.ss - D.sr));
-      const hits = [...W.avoid.map(o => ({ ...o, bad: true })), ...W.good].filter(o => m >= o.w[0] && m < o.w[1]);
-      const t = UI[lang];
-      tip.innerHTML = `<div class="tt-time">${fmt(m)}</div>` + (hits.length
-        ? hits.map(o => `<div class="tt-row ${o.bad ? "bad" : "good"}"><span></span><b>${o.k}</b><br>${span(o.w)}</div>`).join("")
-        : `<div class="tt-row none">${t.noPeriod}</div>`);
-      const box = svg.parentElement.getBoundingClientRect();
-      tip.hidden = false;
-      let x = evt.clientX - box.left + 14, y = evt.clientY - box.top + 14;
-      if (x + tip.offsetWidth > box.width) x = evt.clientX - box.left - tip.offsetWidth - 14;
-      tip.style.left = x + "px"; tip.style.top = y + "px";
-    }
-    svg.addEventListener("pointermove", show);
-    svg.addEventListener("pointerdown", show);
-    svg.addEventListener("pointerleave", () => { tip.hidden = true; });
-  }
-
   // enlarge a sample card in place instead of leaving the page
   const viewer = $("viewer"), vimg = $("viewer-img");
+  if (viewer) {
   let lastFocus = null;
   function closeViewer() { viewer.hidden = true; vimg.removeAttribute("src"); if (lastFocus) lastFocus.focus(); }
   document.querySelectorAll("a.shot").forEach(a => a.addEventListener("click", e => {
@@ -365,8 +329,8 @@
   }));
   viewer.addEventListener("click", e => { if (e.target !== vimg) closeViewer(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && !viewer.hidden) closeViewer(); });
+  }
 
-  setupArcHover();
   setupMeanings();
   lang = pick();
   render();
