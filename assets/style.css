@@ -366,3 +366,18 @@ html[lang=te] .angas h2,html[lang=ta] .angas h2,html[lang=te] .dayline h2,html[l
   .sheet .date .dn{font-size:76px}
   .sheet-in{padding:14px 14px 16px}
 }
+
+/* city pages (18 Nov) */
+.sheet .cityline a{color:#F6CF7E;text-decoration:underline;text-underline-offset:3px;padding:11px 2px;display:inline-block;margin:-11px 0}
+.citylist{max-width:1060px;margin:0 auto;padding:8px 20px 56px}
+.citylist h1{font-family:Marcellus,"Noto Sans Telugu","Noto Sans Tamil",serif;font-size:clamp(28px,5vw,42px);color:#6B1E2E;margin:18px 0 8px}
+.citylist .lead{margin:0 0 18px;color:#5A4038}
+.citylist input{width:100%;max-width:460px;font:inherit;font-size:17px;padding:12px 16px;border:1.5px solid #D9B68A;border-radius:12px;background:#fff;margin-bottom:20px}
+.citylist h2{font-size:19px;color:#6B1E2E;margin:26px 0 10px;border-bottom:1px solid #E6D3B8;padding-bottom:6px}
+.citylist ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.citylist li a{display:block;padding:11px 14px;border-radius:10px;background:#fff;border:1px solid #EBDCC6;color:#2B1A14;text-decoration:none;min-height:44px}
+.citylist li a:hover,.citylist li a:focus{border-color:#D9731A;background:#FFF7EC}
+.citylist .none{display:none;color:#5A4038}
+@media print{ html.can-print .sheet .cityline a{display:none} }
+.langs a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;color:#5A2A33;font-weight:600;text-decoration:none;font-size:15px}
+.langs a[aria-current]{background:#fff;color:#6B1E2E;box-shadow:0 1px 3px rgba(0,0,0,.08)}

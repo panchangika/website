@@ -17,6 +17,7 @@
       now: "Now", nowGood: "Good time now", until: "until", next: "Next", from: "from",
       angas: "Today's panchangam", hour: "Your day, hour by hour", dlSub: c => `Sunrise to sunset · ${c}`, timesFor: c => `Times for ${c}`, sunRow: "Sun", tagGood: "good", tagAvoid: "avoid", clearShort: "Clear time", ytTitle: "Watch every day on YouTube", ytLead: "Today's panchangam, festival specials and short explainers · free", dailyOn: "Daily card by 5 am on", seeAll: "See all times, with meanings", evTitle: "Plan an event", evSub: "Muhurtam for griha pravesham, wedding, vehicle · coming soon", samv: s => `${s} nama samvatsaram`, masa: m => `${m} masa`, clear: "Clear for now.", nextAvoid: "Next to avoid", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
       before: "Before sunrise.", city: { hyderabad: "Hyderabad", chennai: "Chennai" },
+      changeCity: "Change city",
       noData: "Today's panchangam will be back shortly.", noPeriod: "No special period at this time",
     },
     te: {
@@ -34,6 +35,7 @@
       now: "ఇప్పుడు", nowGood: "ఇప్పుడు శుభ సమయం", until: "వరకు", next: "తదుపరి", from: "నుండి",
       angas: "నేటి పంచాంగం", hour: "మీ రోజు, గంట గంటకు", dlSub: c => `సూర్యోదయం నుండి సూర్యాస్తమయం వరకు · ${c}`, timesFor: c => `${c} సమయాలు`, sunRow: "సూర్యుడు", tagGood: "శుభం", tagAvoid: "అశుభం", clearShort: "వర్జించవలసిన సమయం లేదు", ytTitle: "ప్రతి రోజు YouTube లో చూడండి", ytLead: "నేటి పంచాంగం, పండుగ ప్రత్యేకాలు, చిన్న వివరణ వీడియోలు · ఉచితం", dailyOn: "రోజువారీ కార్డు ఉదయం 5 గంటలకల్లా:", seeAll: "అన్ని సమయాలు, వాటి అర్థాలతో", evTitle: "శుభ కార్యానికి ముహూర్తం", evSub: "గృహప్రవేశం, వివాహం, వాహనం · త్వరలో", samv: s => `${s} నామ సంవత్సరం`, masa: m => m, clear: "ప్రస్తుతానికి వర్జించవలసిన సమయం లేదు.", nextAvoid: "తదుపరి అశుభ సమయం", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
       before: "ఇంకా సూర్యోదయం కాలేదు.", city: { hyderabad: "హైదరాబాద్", chennai: "చెన్నై" },
+      changeCity: "ఊరు మార్చండి",
       noData: "నేటి పంచాంగం త్వరలో వస్తుంది.", noPeriod: "ఈ సమయంలో ప్రత్యేక కాలం లేదు",
     },
     ta: {
@@ -51,6 +53,7 @@
       now: "இப்போது", nowGood: "இப்போது நல்ல நேரம்", until: "வரை", next: "அடுத்து", from: "முதல்",
       angas: "இன்றைய பஞ்சாங்கம்", hour: "உங்கள் நாள், மணி வாரியாக", dlSub: c => `சூரிய உதயம் முதல் அஸ்தமனம் வரை · ${c}`, timesFor: c => `${c} நேரம்`, sunRow: "சூரியன்", tagGood: "நல்லது", tagAvoid: "தவிர்க்கவும்", clearShort: "தவிர்க்க வேண்டிய நேரம் இல்லை", ytTitle: "தினமும் YouTube-இல் பாருங்கள்", ytLead: "இன்றைய பஞ்சாங்கம், பண்டிகை சிறப்புகள், சிறு விளக்க வீடியோக்கள் · இலவசம்", dailyOn: "தினசரி அட்டை காலை 5 மணிக்குள்:", seeAll: "அனைத்து நேரங்களும், விளக்கங்களுடன்", evTitle: "சுப காரியத்துக்கு முகூர்த்தம்", evSub: "கிரகப்பிரவேசம், திருமணம், வாகனம் · விரைவில்", samv: s => `${s} வருடம்`, masa: m => m, clear: "இப்போதைக்கு தவிர்க்க வேண்டிய நேரம் இல்லை.", nextAvoid: "அடுத்து தவிர்க்க வேண்டியது", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
       before: "இன்னும் சூரிய உதயம் ஆகவில்லை.", city: { hyderabad: "ஹைதராபாத்", chennai: "சென்னை" },
+      changeCity: "ஊரை மாற்றுங்கள்",
       noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.", noPeriod: "இந்த நேரத்தில் தனி காலம் இல்லை",
     },
   };
@@ -87,6 +90,10 @@
   };
   const CITY = { te: "hyderabad", en: "hyderabad", ta: "chennai" };
   const cityOf = l => document.documentElement.dataset.city || CITY[l];
+  // city pages (/city/<slug>/, /te/city/<slug>/, /ta/city/<slug>/) carry their own name and location
+  const H = document.documentElement.dataset;
+  const isCityPage = !!H.lat;
+  const cityName = l => (isCityPage && H.name) ? H.name : UI[l].city[cityOf(l)];
   const LINKS = {
     te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu", "https://www.instagram.com/panchangika.telugu/", "/te/stotrams/", "https://whatsapp.com/channel/0029Vb9rGqR8fewtWX36kT3n"],
     ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil", "https://www.instagram.com/panchangika.tamil/", "/ta/stotrams/", "https://whatsapp.com/channel/0029VbDjBHEBfxo65RFk7V47"],
@@ -140,7 +147,7 @@
     const good = [], avoid = [];
     if (lang === "ta") D.gowri.forEach(w => good.push({ id: "gowri", k: L.gowri, w }));
     else {
-      if (document.documentElement.dataset.city === "chennai") D.gowri.forEach(w => good.push({ id: "gowri", k: L.gowri, w }));
+      if (document.documentElement.dataset.city === "chennai" && !isCityPage) D.gowri.forEach(w => good.push({ id: "gowri", k: L.gowri, w }));
       if (D.abh) good.push({ id: "abhijit", k: L.abhijit, w: D.abh });
       D.amr.forEach(w => good.push({ id: "amrita", k: L.amrita, w }));
     }
@@ -176,7 +183,7 @@
     if (lang === "ta") { l1 = `${N.TAMIL_MONTH.ta[D.tm]} ${D.td} · ${paksha}`; sv = t.samv(N.SAMVATSARA.ta[D.sva]); }
     else { l1 = `${(D.adh ? N.ADHIKA[lang] : "")}${t.masa(N.LUNAR_MONTH[lang][D.lm])} · ${paksha}`; sv = t.samv(N.SAMVATSARA[lang][D.svt]); }
     $("sub").innerHTML = `${l1}<br>${sv}`;
-    $("cityline").textContent = t.timesFor(t.city[cityOf(lang)]);
+    $("cityline").textContent = t.timesFor(cityName(lang));
   }
 
   function limbs(D) {
@@ -195,7 +202,7 @@
 
   function timeline(D, W, now) {
     const t = UI[lang], L = N.LABEL[lang];
-    $("dl-sub").textContent = t.dlSub(t.city[cityOf(lang)]);
+    $("dl-sub").textContent = t.dlSub(cityName(lang));
     const evs = [];
     W.avoid.forEach(o => { if (o.w[1] > D.sr && o.w[0] < D.ss) evs.push({ ...o, bad: true }); });
     W.good.forEach(o => { if (o.w[1] > D.sr && o.w[0] < D.ss) evs.push({ ...o, bad: false }); });
@@ -240,7 +247,7 @@
     let av = W.avoid.map(li).join("");
     if (lang !== "te") av += `<li>${term("chandrashtamam", L.chandrashtamam)}<span>${N.RASI[lang][D.ch]}</span></li>`;
     $("l-avoid").innerHTML = av;
-    $("full-lead").textContent = t.fullLead(t.city[cityOf(lang)]);
+    $("full-lead").textContent = t.fullLead(cityName(lang));
   }
 
   async function render() {
@@ -253,12 +260,17 @@
     if ($("cta-wa")) $("cta-wa").href = LINKS[lang][4];
     if ($("cta-st")) $("cta-st").href = LINKS[lang][3];
     if ($("nav-st")) $("nav-st").href = LINKS[lang][3];
+    if ($("city-change")) $("city-change").href = { en: "/city/", te: "/te/city/", ta: "/ta/city/" }[lang];
     const mine = ++seq;
     try {
       N = N || await json("/data/names.json");
-      const days = await json(`/data/${cityOf(lang)}.json`);
-      if (mine !== seq) return; // a newer render (language switch) has started
       const { iso, min } = istNow();
+      let days;
+      if (isCityPage) {   // worked out here from the city's own sunrise and sunset (assets/city.js)
+        const G = await json("/data/global.json");
+        days = [window.PanchangCity.build(iso, +H.lat, +H.lon, G)].filter(Boolean);
+      } else days = await json(`/data/${cityOf(lang)}.json`);
+      if (mine !== seq) return; // a newer render (language switch) has started
       const D = days.find(x => x.d === iso);
       if (!D) { $("status").textContent = t.noData; if ($("timeline")) $("timeline").innerHTML = `<li class="now"><span class="nm">${t.noData}</span></li>`; return; }
       const W = windows(D);
@@ -270,7 +282,8 @@
   }
 
   // each language has its own address: / (English), /te/, /ta/
-  const PATH = { en: "/", te: "/te/", ta: "/ta/" };
+  const PATH = isCityPage ? { en: `/city/${H.slug}/`, te: `/te/city/${H.slug}/`, ta: `/ta/city/${H.slug}/` }
+                          : { en: "/", te: "/te/", ta: "/ta/" };
   const pageLang = document.documentElement.dataset.lang || "en";
   function pick() {
     const saved = store.get();
