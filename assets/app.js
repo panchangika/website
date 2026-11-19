@@ -4,7 +4,7 @@
   const UI = {
     en: {
       title: "Know today's good hours before you step out.",
-      lead: "A free daily panchangam in Telugu, Tamil and English. Tithi, nakshatra, Rahu kalam and the good times of the day, on your phone by 5 am.",
+      lead: "A free daily panchangam in Telugu, Tamil and English. Tithi, nakshatra, Rahu kalam and the good times of the day, on your phone every morning.",
       join: "Join our Telegram Channel", watch: "Subscribe on YouTube", follow: "Follow on Instagram", wa: "Follow our WhatsApp Channel",
       full: "Today in full", get: "Get it every morning",
       getLead: "Pick your language. The card comes at the same time every day, free.",
@@ -15,14 +15,14 @@
       privacy: "Privacy", terms: "Terms", meanings: "Meanings", stotrams: "Stotrams with meaning", stotramsSub: "Read daily prayers with their meaning", stotramsGo: "Open stotrams", lgGood: "Good time", lgRahu: "Rahu Kalam", lgSoft: "Other times to avoid", stotramsNav: "Stotrams",
       fullLead: c => `All times are Indian Standard Time for ${c}.`,
       now: "Now", nowGood: "Good time now", until: "until", next: "Next", from: "from",
-      angas: "Today's panchangam", hour: "Your day, hour by hour", dlSub: c => `Sunrise to sunset · ${c}`, timesFor: c => `Times for ${c}`, sunRow: "Sun", tagGood: "good", tagAvoid: "avoid", clearShort: "Clear time", ytTitle: "Watch every day on YouTube", ytLead: "Today's panchangam, festival specials and short explainers · free", dailyOn: "Daily card by 5 am on", seeAll: "See all times, with meanings", evTitle: "Plan an event", evSub: "Muhurtam for griha pravesham, wedding, vehicle · coming soon", samv: s => `${s} nama samvatsaram`, masa: m => `${m} masa`, clear: "Clear for now.", nextAvoid: "Next to avoid", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
+      angas: "Today's panchangam", hour: "Your day, hour by hour", dlSub: c => `Sunrise to sunset · ${c}`, timesFor: c => `Times for ${c}`, sunRow: "Sun", tagGood: "good", tagAvoid: "avoid", clearShort: "Clear time", ytTitle: "Watch every day on YouTube", ytLead: "Today's panchangam, festival specials and short explainers · free", dailyOn: "Daily card every morning on", seeAll: "See all times, with meanings", evTitle: "Plan an event", evSub: "Muhurtam for griha pravesham, wedding, vehicle · coming soon", samv: s => `${s} nama samvatsaram`, masa: m => `${m} masa`, clear: "Clear for now.", nextAvoid: "Next to avoid", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
       before: "Before sunrise.", city: { hyderabad: "Hyderabad", chennai: "Chennai" },
       changeCity: "Change city",
       noData: "Today's panchangam will be back shortly.", noPeriod: "No special period at this time",
     },
     te: {
       title: "బయటికి వెళ్ళే ముందు నేటి శుభ సమయం తెలుసుకోండి.",
-      lead: "తెలుగు, తమిళం, ఇంగ్లీష్‌లో ప్రతి రోజు ఉచిత పంచాంగం. తిథి, నక్షత్రం, రాహుకాలం, శుభ సమయాలు ఉదయం 5 గంటలకల్లా మీ ఫోన్‌లో.",
+      lead: "తెలుగు, తమిళం, ఇంగ్లీష్‌లో ప్రతి రోజు ఉచిత పంచాంగం. తిథి, నక్షత్రం, రాహుకాలం, శుభ సమయాలు ప్రతి ఉదయం మీ ఫోన్‌లో.",
       join: "Telegram ఛానెల్‌లో చేరండి", watch: "YouTube ఛానెల్ సబ్‌స్క్రైబ్ చేయండి", follow: "Instagram లో ఫాలో అవ్వండి", wa: "WhatsApp ఛానెల్ ఫాలో అవ్వండి",
       full: "నేటి పూర్తి పంచాంగం", get: "ప్రతి ఉదయం మీ ఫోన్‌కి",
       getLead: "మీ భాషను ఎంచుకోండి. ప్రతి రోజు అదే సమయానికి, ఉచితంగా.",
@@ -33,14 +33,14 @@
       privacy: "గోప్యత", terms: "నిబంధనలు", meanings: "అర్థాలు", stotrams: "అర్థంతో స్తోత్రాలు", stotramsSub: "రోజువారీ ప్రార్థనలను వాటి అర్థంతో చదవండి", stotramsGo: "స్తోత్రాలు చూడండి", lgGood: "శుభ సమయం", lgRahu: "రాహుకాలం", lgSoft: "ఇతర అశుభ సమయాలు", stotramsNav: "స్తోత్రాలు",
       fullLead: c => `అన్ని సమయాలు ${c} భారత కాలమానం ప్రకారం.`,
       now: "ఇప్పుడు", nowGood: "ఇప్పుడు శుభ సమయం", until: "వరకు", next: "తదుపరి", from: "నుండి",
-      angas: "నేటి పంచాంగం", hour: "మీ రోజు, గంట గంటకు", dlSub: c => `సూర్యోదయం నుండి సూర్యాస్తమయం వరకు · ${c}`, timesFor: c => `${c} సమయాలు`, sunRow: "సూర్యుడు", tagGood: "శుభం", tagAvoid: "అశుభం", clearShort: "వర్జించవలసిన సమయం లేదు", ytTitle: "ప్రతి రోజు YouTube లో చూడండి", ytLead: "నేటి పంచాంగం, పండుగ ప్రత్యేకాలు, చిన్న వివరణ వీడియోలు · ఉచితం", dailyOn: "రోజువారీ కార్డు ఉదయం 5 గంటలకల్లా:", seeAll: "అన్ని సమయాలు, వాటి అర్థాలతో", evTitle: "శుభ కార్యానికి ముహూర్తం", evSub: "గృహప్రవేశం, వివాహం, వాహనం · త్వరలో", samv: s => `${s} నామ సంవత్సరం`, masa: m => m, clear: "ప్రస్తుతానికి వర్జించవలసిన సమయం లేదు.", nextAvoid: "తదుపరి అశుభ సమయం", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
+      angas: "నేటి పంచాంగం", hour: "మీ రోజు, గంట గంటకు", dlSub: c => `సూర్యోదయం నుండి సూర్యాస్తమయం వరకు · ${c}`, timesFor: c => `${c} సమయాలు`, sunRow: "సూర్యుడు", tagGood: "శుభం", tagAvoid: "అశుభం", clearShort: "వర్జించవలసిన సమయం లేదు", ytTitle: "ప్రతి రోజు YouTube లో చూడండి", ytLead: "నేటి పంచాంగం, పండుగ ప్రత్యేకాలు, చిన్న వివరణ వీడియోలు · ఉచితం", dailyOn: "రోజువారీ కార్డు – ప్రతి ఉదయం:", seeAll: "అన్ని సమయాలు, వాటి అర్థాలతో", evTitle: "శుభ కార్యానికి ముహూర్తం", evSub: "గృహప్రవేశం, వివాహం, వాహనం · త్వరలో", samv: s => `${s} నామ సంవత్సరం`, masa: m => m, clear: "ప్రస్తుతానికి వర్జించవలసిన సమయం లేదు.", nextAvoid: "తదుపరి అశుభ సమయం", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
       before: "ఇంకా సూర్యోదయం కాలేదు.", city: { hyderabad: "హైదరాబాద్", chennai: "చెన్నై" },
       changeCity: "ఊరు మార్చండి",
       noData: "నేటి పంచాంగం త్వరలో వస్తుంది.", noPeriod: "ఈ సమయంలో ప్రత్యేక కాలం లేదు",
     },
     ta: {
       title: "வெளியே கிளம்பும் முன் இன்றைய நல்ல நேரத்தை அறிந்துகொள்ளுங்கள்.",
-      lead: "தமிழ், தெலுங்கு, ஆங்கிலத்தில் தினசரி இலவச பஞ்சாங்கம். திதி, நட்சத்திரம், ராகு காலம், கௌரி நல்ல நேரம் காலை 5 மணிக்குள் உங்கள் போனில்.",
+      lead: "தமிழ், தெலுங்கு, ஆங்கிலத்தில் தினசரி இலவச பஞ்சாங்கம். திதி, நட்சத்திரம், ராகு காலம், கௌரி நல்ல நேரம் ஒவ்வொரு காலையும் உங்கள் போனில்.",
       join: "Telegram சேனலில் சேருங்கள்", watch: "YouTube சேனலை சப்ஸ்கிரைப் செய்யுங்கள்", follow: "Instagram-இல் பின்தொடருங்கள்", wa: "WhatsApp சேனலைப் பின்தொடருங்கள்",
       full: "இன்றைய முழு பஞ்சாங்கம்", get: "ஒவ்வொரு காலையும் உங்கள் போனுக்கு",
       getLead: "உங்கள் மொழியைத் தேர்ந்தெடுங்கள். தினமும் அதே நேரத்தில், இலவசமாக.",
@@ -51,7 +51,7 @@
       privacy: "தனியுரிமை", terms: "விதிமுறைகள்", meanings: "விளக்கங்கள்", stotrams: "பொருளுடன் ஸ்தோத்திரங்கள்", stotramsSub: "தினசரி பிரார்த்தனைகளை அவற்றின் பொருளுடன் படியுங்கள்", stotramsGo: "ஸ்தோத்திரங்களைப் பாருங்கள்", lgGood: "நல்ல நேரம்", lgRahu: "ராகு காலம்", lgSoft: "தவிர்க்க வேண்டிய பிற நேரங்கள்", stotramsNav: "ஸ்தோத்திரங்கள்",
       fullLead: c => `எல்லா நேரங்களும் ${c} இந்திய நேரப்படி.`,
       now: "இப்போது", nowGood: "இப்போது நல்ல நேரம்", until: "வரை", next: "அடுத்து", from: "முதல்",
-      angas: "இன்றைய பஞ்சாங்கம்", hour: "உங்கள் நாள், மணி வாரியாக", dlSub: c => `சூரிய உதயம் முதல் அஸ்தமனம் வரை · ${c}`, timesFor: c => `${c} நேரம்`, sunRow: "சூரியன்", tagGood: "நல்லது", tagAvoid: "தவிர்க்கவும்", clearShort: "தவிர்க்க வேண்டிய நேரம் இல்லை", ytTitle: "தினமும் YouTube-இல் பாருங்கள்", ytLead: "இன்றைய பஞ்சாங்கம், பண்டிகை சிறப்புகள், சிறு விளக்க வீடியோக்கள் · இலவசம்", dailyOn: "தினசரி அட்டை காலை 5 மணிக்குள்:", seeAll: "அனைத்து நேரங்களும், விளக்கங்களுடன்", evTitle: "சுப காரியத்துக்கு முகூர்த்தம்", evSub: "கிரகப்பிரவேசம், திருமணம், வாகனம் · விரைவில்", samv: s => `${s} வருடம்`, masa: m => m, clear: "இப்போதைக்கு தவிர்க்க வேண்டிய நேரம் இல்லை.", nextAvoid: "அடுத்து தவிர்க்க வேண்டியது", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
+      angas: "இன்றைய பஞ்சாங்கம்", hour: "உங்கள் நாள், மணி வாரியாக", dlSub: c => `சூரிய உதயம் முதல் அஸ்தமனம் வரை · ${c}`, timesFor: c => `${c} நேரம்`, sunRow: "சூரியன்", tagGood: "நல்லது", tagAvoid: "தவிர்க்கவும்", clearShort: "தவிர்க்க வேண்டிய நேரம் இல்லை", ytTitle: "தினமும் YouTube-இல் பாருங்கள்", ytLead: "இன்றைய பஞ்சாங்கம், பண்டிகை சிறப்புகள், சிறு விளக்க வீடியோக்கள் · இலவசம்", dailyOn: "தினசரி அட்டை – ஒவ்வொரு காலையும்:", seeAll: "அனைத்து நேரங்களும், விளக்கங்களுடன்", evTitle: "சுப காரியத்துக்கு முகூர்த்தம்", evSub: "கிரகப்பிரவேசம், திருமணம், வாகனம் · விரைவில்", samv: s => `${s} வருடம்`, masa: m => m, clear: "இப்போதைக்கு தவிர்க்க வேண்டிய நேரம் இல்லை.", nextAvoid: "அடுத்து தவிர்க்க வேண்டியது", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
       before: "இன்னும் சூரிய உதயம் ஆகவில்லை.", city: { hyderabad: "ஹைதராபாத்", chennai: "சென்னை" },
       changeCity: "ஊரை மாற்றுங்கள்",
       noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.", noPeriod: "இந்த நேரத்தில் தனி காலம் இல்லை",
@@ -95,7 +95,7 @@
   const isCityPage = !!H.lat;
   const cityName = l => (isCityPage && H.name) ? H.name : UI[l].city[cityOf(l)];
   const LINKS = {
-    te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu", "https://www.instagram.com/panchangika.telugu/", "/te/stotrams/", "https://whatsapp.com/channel/0029Vb9rGqR8fewtWX36kT3n"],
+    te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu", null, "/te/stotrams/", "https://whatsapp.com/channel/0029Vb9rGqR8fewtWX36kT3n"],
     ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil", "https://www.instagram.com/panchangika.tamil/", "/ta/stotrams/", "https://whatsapp.com/channel/0029VbDjBHEBfxo65RFk7V47"],
     en: ["https://t.me/panchangika_en", "https://www.youtube.com/@Panchangika", "https://www.instagram.com/panchangika.in/", "/stotrams/", "https://whatsapp.com/channel/0029VbED6csKQuJRkevtPc3c"],
   };
@@ -256,7 +256,7 @@
     document.querySelectorAll("[data-t]").forEach(el => { const v = t[el.dataset.t]; if (typeof v === "string") el.textContent = v; });
     document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.l === lang)));
     $("cta-tg").href = LINKS[lang][0]; $("cta-yt").href = LINKS[lang][1];
-    if ($("cta-ig")) $("cta-ig").href = LINKS[lang][2];
+    if ($("cta-ig")) { $("cta-ig").style.display = LINKS[lang][2] ? "" : "none"; if (LINKS[lang][2]) $("cta-ig").href = LINKS[lang][2]; }
     if ($("cta-wa")) $("cta-wa").href = LINKS[lang][4];
     if ($("cta-st")) $("cta-st").href = LINKS[lang][3];
     if ($("nav-st")) $("nav-st").href = LINKS[lang][3];
