@@ -294,7 +294,7 @@
 
   document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => {
     const l = b.dataset.l; store.set(l);
-    if (l !== pageLang) location.href = PATH[l]; 
+    if (l !== pageLang) location.href = PATH[l] + (isCityPage ? location.search : ""); 
   }));
 
 
@@ -346,7 +346,27 @@
 
   setupMeanings();
   lang = pick();
-  render();
+  // PIN code: /city/<nearest city>/?pin=500032 works out the times for that PIN's own location (data/pin/NN.json)
+  async function pinSetup() {
+    const pin = new URLSearchParams(location.search).get("pin") || "";
+    if (!isCityPage || !/^[1-9][0-9]{5}$/.test(pin)) return;
+    try {
+      const d = await json(`/data/pin/${pin.slice(0, 2)}.json`), e = d && d[pin];
+      if (!e) return;
+      const office = e[2].split(", ")[0], old = H.name, nm = `${office} · PIN ${pin}`, oldSt = H.state || "";
+      let st = "";
+      try { const S = await json("/data/pin/states.json"); st = (S[e[6]] || [])[{ en: 0, te: 1, ta: 2 }[pageLang]] || ""; } catch (err) { }
+      H.lat = e[0]; H.lon = e[1]; H.name = nm;
+      document.querySelectorAll("h1, main .lead").forEach(el => {
+        let t = el.textContent;
+        if (old) t = t.split(old).join(el.tagName === "H1" ? nm : office);
+        if (oldSt) t = t.split(`(${oldSt})`).join(st ? `(${st})` : "").split(`, ${oldSt}`).join(st ? `, ${st}` : "");
+        el.textContent = t;
+      });
+      document.title = document.title.split(old).join(nm);
+    } catch (err) { /* keep the city's own times */ }
+  }
+  pinSetup().then(render);
   clearInterval(timer);
   timer = setInterval(render, 60000);
 })();
