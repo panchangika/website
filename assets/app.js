@@ -353,13 +353,24 @@
     try {
       const d = await json(`/data/pin/${pin.slice(0, 2)}.json`), e = d && d[pin];
       if (!e) return;
-      const office = e[2].split(", ")[0], old = H.name, nm = `${office} · PIN ${pin}`, oldSt = H.state || "";
+      // te/ta: post office names exist only in English, so the nearby town's own-language name goes with them
+      const office0 = e[2].split(", ")[0], old = H.name, oldSt = H.state || "";
+      // te/ta: name the nearby listed town (in that language) only when the PIN really is near it (<= 25 km);
+      // otherwise, and always in English, name the PIN's district
+      const near = (() => { const R = 6371, r = Math.PI / 180, la1 = +H.lat * r, la2 = e[0] * r, dl = (e[1] - +H.lon) * r;
+        return 2 * R * Math.asin(Math.sqrt(Math.sin((la2 - la1) / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin(dl / 2) ** 2)); })();
+      const area = pageLang !== "en" && near <= 25 && !e[5] ? old : e[3];
+      const office = !area || area === office0 || office0.includes(area) ? office0 : `${office0}, ${area}`;
+      const nm = `${office} · ${{ en: "PIN", te: "పిన్", ta: "பின்கோடு" }[pageLang] || "PIN"} ${pin}`;
       let st = "";
       try { const S = await json("/data/pin/states.json"); st = (S[e[6]] || [])[{ en: 0, te: 1, ta: 2 }[pageLang]] || ""; } catch (err) { }
       H.lat = e[0]; H.lon = e[1]; H.name = nm;
       document.querySelectorAll("h1, main .lead").forEach(el => {
         let t = el.textContent;
-        if (old) t = t.split(old).join(el.tagName === "H1" ? nm : office);
+        if (old) {   // the first mention names the place fully, later ones just the post office
+          const parts = t.split(old);
+          t = parts.map((p, i) => i === 0 ? p : (el.tagName === "H1" ? nm : (i === 1 ? office : office0)) + p).join("");
+        }
         if (oldSt) t = t.split(`(${oldSt})`).join(st ? `(${st})` : "").split(`, ${oldSt}`).join(st ? `, ${st}` : "");
         el.textContent = t;
       });
