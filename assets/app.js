@@ -153,7 +153,9 @@
     }
     avoid.push({ id: "rahu", k: L.rahu, w: D.rahu, main: true }, { id: "yama", k: L.yama, w: D.yama }, { id: "gulika", k: L.gulika, w: D.gul });
     if (lang !== "ta") {
-      D.dur.forEach(w => avoid.push({ id: "durmuhurtham", k: L.durmuhurtham, w }));
+      // Saturday's two durmuhurthams touch (e.g. 6:24-7:09 and 7:09-7:54): show them as one span
+      D.dur.reduce((m, w) => (m.length && w[0] <= m[m.length - 1][1] ? (m[m.length - 1] = [m[m.length - 1][0], Math.max(m[m.length - 1][1], w[1])]) : m.push(w.slice()), m), [])
+        .forEach(w => avoid.push({ id: "durmuhurtham", k: L.durmuhurtham, w }));
       D.varj.forEach(w => avoid.push({ id: "varjyam", k: L.varjyam, w }));
     }
     return { good, avoid };
