@@ -219,7 +219,7 @@ footer nav{display:flex;gap:20px}
 /* ---- 17 Nov design fixes (design review) ---- */
 /* stop sideways scrolling on phones */
 html,body{overflow-x:clip}
-.hero h1,.legal h1,h2{overflow-wrap:anywhere}
+.hero h1,.legal h1,h2{overflow-wrap:break-word}
 footer nav{display:flex;flex-wrap:wrap;gap:0 18px}
 /* panchangam first on phones */
 @media (max-width:900px){
@@ -386,3 +386,7 @@ html[lang=te] .angas h2,html[lang=ta] .angas h2,html[lang=te] .dayline h2,html[l
 @media (max-width:480px){html[lang=en] .citylist ul{grid-template-columns:1fr}}
 html[lang=ta] .citylist ul{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
 @media (max-width:560px){html[lang=ta] .citylist ul{grid-template-columns:1fr}}
+/* very narrow phones (320-380 px): keep English times on one line inside the box (SEO batch 1, 22 Nov) */
+@media (max-width:380px){.lists li{gap:8px} html[lang=en] .lists li span:last-child{font-size:15px;letter-spacing:-.2px}}
+/* long Tamil/Telugu words in headings: smaller on narrow phones so no word is split (SEO batch 1, 22 Nov) */
+@media (max-width:380px){html[lang=ta] h2,html[lang=te] h2{font-size:21px} html[lang=te] .legal h1{font-size:26px} html[lang=ta] .legal h1{font-size:24px}}

@@ -3,7 +3,7 @@
 
   const UI = {
     en: {
-      title: "Know today's good hours before you step out.",
+      title: "Today's Panchangam: know the good hours before you step out.",
       lead: "A free daily panchangam in Telugu, Tamil and English. Tithi, nakshatra, Rahu kalam and the good times of the day, on your phone every morning.",
       join: "Join our Telegram Channel", watch: "Subscribe on YouTube", follow: "Follow on Instagram", wa: "Follow our WhatsApp Channel",
       full: "Today in full", get: "Get it every morning",
@@ -21,7 +21,7 @@
       noData: "Today's panchangam will be back shortly.", noPeriod: "No special period at this time",
     },
     te: {
-      title: "బయటికి వెళ్ళే ముందు నేటి శుభ సమయం తెలుసుకోండి.",
+      title: "నేటి పంచాంగం: బయటికి వెళ్ళే ముందు శుభ సమయం తెలుసుకోండి.",
       lead: "తెలుగు, తమిళం, ఇంగ్లీష్‌లో ప్రతి రోజు ఉచిత పంచాంగం. తిథి, నక్షత్రం, రాహుకాలం, శుభ సమయాలు ప్రతి ఉదయం మీ ఫోన్‌లో.",
       join: "Telegram ఛానెల్‌లో చేరండి", watch: "YouTube ఛానెల్ సబ్‌స్క్రైబ్ చేయండి", follow: "Instagram లో ఫాలో అవ్వండి", wa: "WhatsApp ఛానెల్ ఫాలో అవ్వండి",
       full: "నేటి పూర్తి పంచాంగం", get: "ప్రతి ఉదయం మీ ఫోన్‌కి",
@@ -39,7 +39,7 @@
       noData: "నేటి పంచాంగం త్వరలో వస్తుంది.", noPeriod: "ఈ సమయంలో ప్రత్యేక కాలం లేదు",
     },
     ta: {
-      title: "வெளியே கிளம்பும் முன் இன்றைய நல்ல நேரத்தை அறிந்துகொள்ளுங்கள்.",
+      title: "இன்றைய பஞ்சாங்கம்: வெளியே கிளம்பும் முன் நல்ல நேரத்தை அறிந்துகொள்ளுங்கள்.",
       lead: "தமிழ், தெலுங்கு, ஆங்கிலத்தில் தினசரி இலவச பஞ்சாங்கம். திதி, நட்சத்திரம், ராகு காலம், கௌரி நல்ல நேரம் ஒவ்வொரு காலையும் உங்கள் போனில்.",
       join: "Telegram சேனலில் சேருங்கள்", watch: "YouTube சேனலை சப்ஸ்கிரைப் செய்யுங்கள்", follow: "Instagram-இல் பின்தொடருங்கள்", wa: "WhatsApp சேனலைப் பின்தொடருங்கள்",
       full: "இன்றைய முழு பஞ்சாங்கம்", get: "ஒவ்வொரு காலையும் உங்கள் போனுக்கு",
