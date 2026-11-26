@@ -18,6 +18,7 @@
       angas: "Today's panchangam", hour: "Your day, hour by hour", dlSub: c => `Sunrise to sunset · ${c}`, timesFor: c => `Times for ${c}`, sunRow: "Sun", tagGood: "good", tagAvoid: "avoid", clearShort: "Clear time", ytTitle: "Watch every day on YouTube", ytLead: "Today's panchangam, festival specials and short explainers · free", dailyOn: "Daily card every morning on", seeAll: "See all times, with meanings", evTitle: "Plan an event", evSub: "Muhurtam for griha pravesham, wedding, vehicle · coming soon", samv: s => `${s} nama samvatsaram`, masa: m => `${m} masa`, clear: "Clear for now.", nextAvoid: "Next to avoid", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
       before: "Before sunrise.", city: { hyderabad: "Hyderabad", chennai: "Chennai" },
       changeCity: "Change city",
+      myTown: "Your town:", calLink: "Free 2027 calendar (PDF)",
       noData: "Today's panchangam will be back shortly.", noPeriod: "No special period at this time",
     },
     te: {
@@ -36,6 +37,7 @@
       angas: "నేటి పంచాంగం", hour: "మీ రోజు, గంట గంటకు", dlSub: c => `సూర్యోదయం నుండి సూర్యాస్తమయం వరకు · ${c}`, timesFor: c => `${c} సమయాలు`, sunRow: "సూర్యుడు", tagGood: "శుభం", tagAvoid: "అశుభం", clearShort: "వర్జించవలసిన సమయం లేదు", ytTitle: "ప్రతి రోజు YouTube లో చూడండి", ytLead: "నేటి పంచాంగం, పండుగ ప్రత్యేకాలు, చిన్న వివరణ వీడియోలు · ఉచితం", dailyOn: "రోజువారీ కార్డు – ప్రతి ఉదయం:", seeAll: "అన్ని సమయాలు, వాటి అర్థాలతో", evTitle: "శుభ కార్యానికి ముహూర్తం", evSub: "గృహప్రవేశం, వివాహం, వాహనం · త్వరలో", samv: s => `${s} నామ సంవత్సరం`, masa: m => m, clear: "ప్రస్తుతానికి వర్జించవలసిన సమయం లేదు.", nextAvoid: "తదుపరి అశుభ సమయం", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
       before: "ఇంకా సూర్యోదయం కాలేదు.", city: { hyderabad: "హైదరాబాద్", chennai: "చెన్నై" },
       changeCity: "ఊరు మార్చండి",
+      myTown: "మీ ఊరు:", calLink: "ఉచిత 2027 క్యాలెండర్ (PDF)",
       noData: "నేటి పంచాంగం త్వరలో వస్తుంది.", noPeriod: "ఈ సమయంలో ప్రత్యేక కాలం లేదు",
     },
     ta: {
@@ -54,6 +56,7 @@
       angas: "இன்றைய பஞ்சாங்கம்", hour: "உங்கள் நாள், மணி வாரியாக", dlSub: c => `சூரிய உதயம் முதல் அஸ்தமனம் வரை · ${c}`, timesFor: c => `${c} நேரம்`, sunRow: "சூரியன்", tagGood: "நல்லது", tagAvoid: "தவிர்க்கவும்", clearShort: "தவிர்க்க வேண்டிய நேரம் இல்லை", ytTitle: "தினமும் YouTube-இல் பாருங்கள்", ytLead: "இன்றைய பஞ்சாங்கம், பண்டிகை சிறப்புகள், சிறு விளக்க வீடியோக்கள் · இலவசம்", dailyOn: "தினசரி அட்டை – ஒவ்வொரு காலையும்:", seeAll: "அனைத்து நேரங்களும், விளக்கங்களுடன்", evTitle: "சுப காரியத்துக்கு முகூர்த்தம்", evSub: "கிரகப்பிரவேசம், திருமணம், வாகனம் · விரைவில்", samv: s => `${s} வருடம்`, masa: m => m, clear: "இப்போதைக்கு தவிர்க்க வேண்டிய நேரம் இல்லை.", nextAvoid: "அடுத்து தவிர்க்க வேண்டியது", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
       before: "இன்னும் சூரிய உதயம் ஆகவில்லை.", city: { hyderabad: "ஹைதராபாத்", chennai: "சென்னை" },
       changeCity: "ஊரை மாற்றுங்கள்",
+      myTown: "உங்கள் ஊர்:", calLink: "இலவச 2027 காலண்டர் (PDF)",
       noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.", noPeriod: "இந்த நேரத்தில் தனி காலம் இல்லை",
     },
   };
@@ -69,7 +72,7 @@
       amrita: "A favourable period linked to the day's nakshatra. Considered good for starting important work and ceremonies.",
       abhijit: "About 48 minutes around local midday, considered auspicious for most new beginnings. Traditionally not used on Wednesdays.",
       gowri: "Gowri panchangam divides the day and the night into eight parts each. The good parts (Amirdham, Uthi, Labam, Dhanam, Sugam) suit new work.",
-      chandrashtamam: "The roughly 2¼ days when the Moon passes the 8th sign from a person's birth rasi. People of the rasi shown are advised to be careful and avoid big decisions.",
+      chandrashtamam: "The roughly 2¼ days when the Moon passes the 8th sign from a person's birth rasi. By tradition, people of the rasi shown take extra care and avoid big decisions.",
     },
     te: {
       rahu: "పగటి సమయంలో ఎనిమిదో వంతు (సుమారు గంటన్నర) రాహువుకు చెందిన కాలం. కొత్త పనులు, ప్రయాణాలు, కొనుగోళ్లు, శుభకార్యాలు ఈ సమయంలో ప్రారంభించరాదని సంప్రదాయం.",
@@ -79,6 +82,7 @@
       varjyam: "ఆ రోజు నక్షత్రాన్ని బట్టి వచ్చే సుమారు గంటన్నర అశుభ కాలం. శుభకార్యాలు ఈ సమయంలో ప్రారంభించరు.",
       amrita: "ఆ రోజు నక్షత్రాన్ని బట్టి వచ్చే శుభ సమయం. ముఖ్యమైన పనులు, శుభకార్యాలు ప్రారంభించడానికి మంచిదని నమ్మకం.",
       abhijit: "మధ్యాహ్నం చుట్టూ ఉండే సుమారు 48 నిమిషాల శుభ ముహూర్తం. చాలా కొత్త పనులకు అనుకూలం; బుధవారం దీనిని పాటించరు.",
+      chandrashtamam: "జన్మ రాశి నుండి ఎనిమిదో రాశిలో చంద్రుడు సంచరించే సుమారు రెండుంబావు రోజులు. ఆ రాశి వారు పెద్ద నిర్ణయాలు వాయిదా వేసి జాగ్రత్తగా ఉండటం సంప్రదాయం.",
     },
     ta: {
       rahu: "பகல் நேரத்தின் எட்டில் ஒரு பங்கு (சுமார் ஒன்றரை மணி நேரம்) ராகுவுக்குரிய காலம். புதிய காரியங்கள், பயணம், பொருள் வாங்குதல், சுப நிகழ்ச்சிகளை இந்த நேரத்தில் தொடங்குவதில்லை என்பது மரபு.",
@@ -247,9 +251,53 @@
     const li = o => `<li>${term(o.id, o.k)}<span>${span(o.w)}</span></li>`;
     $("l-good").innerHTML = W.good.map(li).join("") || `<li><span>–</span><span></span></li>`;
     let av = W.avoid.map(li).join("");
-    if (lang !== "te") av += `<li>${term("chandrashtamam", L.chandrashtamam)}<span>${N.RASI[lang][D.ch]}</span></li>`;
+    av += `<li>${term("chandrashtamam", L.chandrashtamam)}<span>${N.RASI[lang][D.ch]}</span></li>`;
     $("l-avoid").innerHTML = av;
     $("full-lead").textContent = t.fullLead(cityName(lang));
+  }
+
+  // remember the visitor's town: a city page (or PIN) visited on this phone is offered on the home page next time
+  const TOWN_KEY = "pk-town";
+  function saveTown() {
+    if (!isCityPage) return;
+    const m = location.pathname.match(/\/city\/([a-z0-9-]+)\//);
+    if (!m) return;
+    const pin = new URLSearchParams(location.search).get("pin") || "";
+    try {
+      const old = JSON.parse(localStorage.getItem(TOWN_KEY) || "{}");
+      const same = old.slug === m[1] && (old.pin || "") === pin;
+      const names = same ? (old.names || {}) : {};
+      names[pageLang] = H.name || "";
+      localStorage.setItem(TOWN_KEY, JSON.stringify({ slug: m[1], pin: /^[1-9][0-9]{5}$/.test(pin) ? pin : "", names }));
+    } catch (e) { /* storage off */ }
+  }
+  function showMyTown() {
+    const el = $("mytown");
+    if (!el || isCityPage) return;
+    let v = null;
+    try { v = JSON.parse(localStorage.getItem(TOWN_KEY) || "null"); } catch (e) { v = null; }
+    if (!v || !/^[a-z0-9-]+$/.test(v.slug || "")) { el.hidden = true; return; }
+    if (v.pin && !(v.names && v.names[lang])) {   // a PIN's own place name is known only in the language it was visited in
+      v.names = v.names || {}; v.names[lang] = ({ en: "PIN", te: "పిన్", ta: "பின்கோடு" })[lang] + " " + v.pin;
+    }
+    if (!(v.names && v.names[lang])) {   // name not stored in this language yet: find it on this language's city list, once
+      fetch({ en: "", te: "/te", ta: "/ta" }[lang] + "/city/").then(r => r.ok ? r.text() : "").then(html => {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const a = doc.querySelector(`a[href$="/city/${v.slug}/"]`);
+        const town = a && a.textContent.trim();
+        if (!town) return;
+        v.names = v.names || {}; v.names[lang] = town + (v.pin ? ` (${v.pin})` : "");
+        try { localStorage.setItem(TOWN_KEY, JSON.stringify(v)); } catch (e) { /* storage off */ }
+        showMyTown();
+      }).catch(() => {});
+      el.hidden = true; return;
+    }
+    const name = v.names[lang];
+    const href = { en: "", te: "/te", ta: "/ta" }[lang] + `/city/${v.slug}/` + (v.pin ? `?pin=${v.pin}` : "");
+    el.textContent = "";
+    el.append(UI[lang].myTown + " ");
+    const a = document.createElement("a"); a.href = href; a.textContent = name + "\u00A0\u2192"; el.append(a);
+    el.hidden = false;
   }
 
   async function render() {
@@ -263,6 +311,8 @@
     if ($("cta-st")) $("cta-st").href = LINKS[lang][3];
     if ($("nav-st")) $("nav-st").href = LINKS[lang][3];
     if ($("city-change")) $("city-change").href = { en: "/city/", te: "/te/city/", ta: "/ta/city/" }[lang];
+    if ($("cal-link")) $("cal-link").href = { en: "/calendar/", te: "/te/calendar/", ta: "/ta/calendar/" }[lang];
+    showMyTown();
     const mine = ++seq;
     try {
       N = N || await json("/data/names.json");
@@ -363,7 +413,7 @@
         return 2 * R * Math.asin(Math.sqrt(Math.sin((la2 - la1) / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin(dl / 2) ** 2)); })();
       const area = pageLang !== "en" && near <= 25 && !e[5] ? old : e[3];
       const office = !area || area === office0 || office0.includes(area) ? office0 : `${office0}, ${area}`;
-      const nm = `${office} · ${{ en: "PIN", te: "పిన్", ta: "பின்கோடு" }[pageLang] || "PIN"} ${pin}`;
+      const nm = `${office}\u00A0· ${{ en: "PIN", te: "పిన్", ta: "பின்கோடு" }[pageLang] || "PIN"} ${pin}`;
       let st = "";
       try { const S = await json("/data/pin/states.json"); st = (S[e[6]] || [])[{ en: 0, te: 1, ta: 2 }[pageLang]] || ""; } catch (err) { }
       H.lat = e[0]; H.lon = e[1]; H.name = nm;
@@ -379,7 +429,7 @@
       document.title = document.title.split(old).join(nm);
     } catch (err) { /* keep the city's own times */ }
   }
-  pinSetup().then(render);
+  pinSetup().then(() => { saveTown(); render(); });
   clearInterval(timer);
   timer = setInterval(render, 60000);
 })();
