@@ -18,7 +18,7 @@
       angas: "Today's panchangam", hour: "Your day, hour by hour", dlSub: c => `Sunrise to sunset · ${c}`, timesFor: c => `Times for ${c}`, sunRow: "Sun", tagGood: "good", tagAvoid: "avoid", clearShort: "Clear time", ytTitle: "Watch every day on YouTube", ytLead: "Today's panchangam, festival specials and short explainers · free", dailyOn: "Daily card every morning on", seeAll: "See all times, with meanings", evTitle: "Plan an event", evSub: "Muhurtam for griha pravesham, wedding, vehicle · coming soon", samv: s => `${s} nama samvatsaram`, masa: m => `${m} masa`, clear: "Clear for now.", nextAvoid: "Next to avoid", set: "The sun has set.", tomorrowRise: "Sunrise tomorrow",
       before: "Before sunrise.", city: { hyderabad: "Hyderabad", chennai: "Chennai" },
       changeCity: "Change city",
-      myTown: "Your town:", calLink: "Free 2027 calendar (PDF)",
+      myTown: "Your town:", calLink: "Free 2027 calendar (PDF)", sbLink: "★ Find your star birthday",
       noData: "Today's panchangam will be back shortly.", noPeriod: "No special period at this time",
     },
     te: {
@@ -37,7 +37,7 @@
       angas: "నేటి పంచాంగం", hour: "మీ రోజు, గంట గంటకు", dlSub: c => `సూర్యోదయం నుండి సూర్యాస్తమయం వరకు · ${c}`, timesFor: c => `${c} సమయాలు`, sunRow: "సూర్యుడు", tagGood: "శుభం", tagAvoid: "అశుభం", clearShort: "వర్జించవలసిన సమయం లేదు", ytTitle: "ప్రతి రోజు YouTube లో చూడండి", ytLead: "నేటి పంచాంగం, పండుగ ప్రత్యేకాలు, చిన్న వివరణ వీడియోలు · ఉచితం", dailyOn: "రోజువారీ కార్డు – ప్రతి ఉదయం:", seeAll: "అన్ని సమయాలు, వాటి అర్థాలతో", evTitle: "శుభ కార్యానికి ముహూర్తం", evSub: "గృహప్రవేశం, వివాహం, వాహనం · త్వరలో", samv: s => `${s} నామ సంవత్సరం`, masa: m => m, clear: "ప్రస్తుతానికి వర్జించవలసిన సమయం లేదు.", nextAvoid: "తదుపరి అశుభ సమయం", set: "సూర్యాస్తమయం అయింది.", tomorrowRise: "రేపు సూర్యోదయం",
       before: "ఇంకా సూర్యోదయం కాలేదు.", city: { hyderabad: "హైదరాబాద్", chennai: "చెన్నై" },
       changeCity: "ఊరు మార్చండి",
-      myTown: "మీ ఊరు:", calLink: "ఉచిత 2027 క్యాలెండర్ (PDF)",
+      myTown: "మీ ఊరు:", calLink: "ఉచిత 2027 క్యాలెండర్ (PDF)", sbLink: "★ మీ నక్షత్ర పుట్టినరోజు తెలుసుకోండి",
       noData: "నేటి పంచాంగం త్వరలో వస్తుంది.", noPeriod: "ఈ సమయంలో ప్రత్యేక కాలం లేదు",
     },
     ta: {
@@ -56,8 +56,27 @@
       angas: "இன்றைய பஞ்சாங்கம்", hour: "உங்கள் நாள், மணி வாரியாக", dlSub: c => `சூரிய உதயம் முதல் அஸ்தமனம் வரை · ${c}`, timesFor: c => `${c} நேரம்`, sunRow: "சூரியன்", tagGood: "நல்லது", tagAvoid: "தவிர்க்கவும்", clearShort: "தவிர்க்க வேண்டிய நேரம் இல்லை", ytTitle: "தினமும் YouTube-இல் பாருங்கள்", ytLead: "இன்றைய பஞ்சாங்கம், பண்டிகை சிறப்புகள், சிறு விளக்க வீடியோக்கள் · இலவசம்", dailyOn: "தினசரி அட்டை – ஒவ்வொரு காலையும்:", seeAll: "அனைத்து நேரங்களும், விளக்கங்களுடன்", evTitle: "சுப காரியத்துக்கு முகூர்த்தம்", evSub: "கிரகப்பிரவேசம், திருமணம், வாகனம் · விரைவில்", samv: s => `${s} வருடம்`, masa: m => m, clear: "இப்போதைக்கு தவிர்க்க வேண்டிய நேரம் இல்லை.", nextAvoid: "அடுத்து தவிர்க்க வேண்டியது", set: "சூரியன் மறைந்துவிட்டது.", tomorrowRise: "நாளை சூரிய உதயம்",
       before: "இன்னும் சூரிய உதயம் ஆகவில்லை.", city: { hyderabad: "ஹைதராபாத்", chennai: "சென்னை" },
       changeCity: "ஊரை மாற்றுங்கள்",
-      myTown: "உங்கள் ஊர்:", calLink: "இலவச 2027 காலண்டர் (PDF)",
+      myTown: "உங்கள் ஊர்:", calLink: "இலவச 2027 காலண்டர் (PDF)", sbLink: "★ உங்க நட்சத்திரப் பிறந்தநாள்",
       noData: "இன்றைய பஞ்சாங்கம் விரைவில் வரும்.", noPeriod: "இந்த நேரத்தில் தனி காலம் இல்லை",
+    },
+    hi: {
+      title: "आज का पंचांग: घर से निकलने से पहले शुभ समय जानें।",
+      lead: "हिन्दी, तेलुगु, तमिल और अंग्रेज़ी में प्रतिदिन निःशुल्क पंचांग। तिथि, नक्षत्र, राहु काल और दिन के शुभ समय, हर सुबह आपके फ़ोन पर।",
+      join: "Telegram चैनल से जुड़ें", watch: "YouTube चैनल सब्सक्राइब करें", follow: "Instagram पर फ़ॉलो करें", wa: "WhatsApp चैनल फ़ॉलो करें",
+      full: "आज का पूरा पंचांग", get: "हर सुबह आपके फ़ोन पर",
+      getLead: "अपनी भाषा चुनें। हर दिन उसी समय, निःशुल्क।",
+      cityTe: "हैदराबाद के समय", cityTa: "चेन्नई के समय", cityEn: "हैदराबाद के समय",
+      how: "समय कैसे निकाले जाते हैं",
+      how1: "हर समय दिखाए गए शहर के लिए सूर्य और चंद्रमा की वास्तविक स्थिति से, अधिकतर भारतीय पंचांगों में अपनाए जाने वाले लाहिड़ी अयनांश के साथ निकाला जाता है। हर दिन के आँकड़े मानक छपे पंचांगों से मिलाए जाते हैं।",
+      how2: "राहु काल, यमगण्ड और गुलिक काल सूर्योदय से सूर्यास्त तक के दिन की लंबाई पर निर्भर करते हैं, इसलिए ये हर दिन और हर शहर में थोड़े बदलते हैं। विवाह, गृह प्रवेश जैसे महत्वपूर्ण कार्यों के लिए मुहूर्त अपने कुल पुरोहित से अवश्य पक्का करें।",
+      privacy: "गोपनीयता", terms: "नियम", meanings: "अर्थ", stotrams: "अर्थ सहित स्तोत्र", stotramsSub: "दैनिक प्रार्थनाएँ उनके अर्थ के साथ पढ़ें", stotramsGo: "स्तोत्र देखें", lgGood: "शुभ समय", lgRahu: "राहु काल", lgSoft: "अन्य अशुभ समय", stotramsNav: "स्तोत्र",
+      fullLead: c => `सभी समय ${c} के लिए भारतीय मानक समय में हैं।`,
+      now: "अभी", nowGood: "अभी शुभ समय", until: "तक", next: "अगला", from: "से",
+      angas: "आज का पंचांग", hour: "आपका दिन, घंटे-दर-घंटे", dlSub: c => `सूर्योदय से सूर्यास्त तक · ${c}`, timesFor: c => `${c} के समय`, sunRow: "सूर्य", tagGood: "शुभ", tagAvoid: "अशुभ", clearShort: "कोई अशुभ समय नहीं", ytTitle: "हर दिन YouTube पर देखें", ytLead: "आज का पंचांग, त्योहार विशेष और छोटे वीडियो · निःशुल्क", dailyOn: "दैनिक कार्ड – हर सुबह:", seeAll: "सभी समय, उनके अर्थ के साथ", evTitle: "शुभ कार्य के लिए मुहूर्त", evSub: "गृह प्रवेश, विवाह, वाहन · जल्द आ रहा है", samv: s => s, masa: m => `${m} मास`, clear: "अभी कोई अशुभ समय नहीं।", nextAvoid: "अगला अशुभ समय", set: "सूर्यास्त हो चुका है।", tomorrowRise: "कल सूर्योदय",
+      before: "अभी सूर्योदय नहीं हुआ।", city: { hyderabad: "हैदराबाद", chennai: "चेन्नई", delhi: "दिल्ली" },
+      changeCity: "शहर बदलें",
+      myTown: "आपका शहर:", calLink: "निःशुल्क 2027 कैलेंडर (PDF)", sbLink: "",
+      noData: "आज का पंचांग जल्द ही वापस आएगा।", noPeriod: "इस समय कोई विशेष काल नहीं",
     },
   };
 
@@ -91,8 +110,18 @@
       gowri: "கௌரி பஞ்சாங்கம் பகலையும் இரவையும் தலா எட்டு பகுதிகளாகப் பிரிக்கிறது. அமிர்தம், உத்தி, லாபம், தனம், சுகம் ஆகிய பகுதிகள் நல்ல காரியங்களுக்கு ஏற்றவை.",
       chandrashtamam: "பிறந்த ராசியிலிருந்து எட்டாவது ராசியில் சந்திரன் சஞ்சரிக்கும் சுமார் இரண்டே கால் நாட்கள். குறிப்பிட்ட ராசிக்காரர்கள் முக்கிய முடிவுகளைத் தவிர்த்து கவனமாக இருப்பது நல்லது என்பது நம்பிக்கை.",
     },
+    hi: {
+      rahu: "दिन के समय का आठवाँ भाग (लगभग डेढ़ घंटा), जो राहु से जुड़ा है। परंपरा से इसमें नया काम, यात्रा, ख़रीदारी या शुभ कार्य शुरू नहीं किए जाते।",
+      yama: "दिन के समय का यम से जुड़ा आठवाँ भाग। शुभ कार्यों, विशेषकर यात्रा शुरू करने के लिए उचित नहीं माना जाता।",
+      gulika: "शनि के पुत्र गुलिक का दिन का आठवाँ भाग। माना जाता है कि इसमें शुरू किया काम दोहराया जाता है, इसलिए अंत्येष्टि या क़र्ज़ लेने से इसमें बचा जाता है।",
+      durmuhurtham: "वार के अनुसार आने वाला लगभग 48 मिनट का अशुभ मुहूर्त (दिन में एक या दो बार)। विवाह, गृह प्रवेश और नए काम में इससे बचा जाता है।",
+      varjyam: "दिन के नक्षत्र से निकलने वाला लगभग डेढ़ घंटे का अशुभ समय। इसमें शुभ कार्य शुरू नहीं किए जाते।",
+      amrita: "दिन के नक्षत्र से निकलने वाला शुभ समय। महत्वपूर्ण काम और शुभ कार्य शुरू करने के लिए अच्छा माना जाता है।",
+      abhijit: "स्थानीय दोपहर के आसपास लगभग 48 मिनट का शुभ मुहूर्त। अधिकतर नए कामों के लिए अच्छा; परंपरा से बुधवार को नहीं लिया जाता।",
+      chandrashtamam: "जन्म राशि से आठवीं राशि में चंद्रमा के रहने के लगभग सवा दो दिन। परंपरा से दिखाई गई राशि के लोग बड़े निर्णय टालते हैं और सावधान रहते हैं।",
+    },
   };
-  const CITY = { te: "hyderabad", en: "hyderabad", ta: "chennai" };
+  const CITY = { te: "hyderabad", en: "hyderabad", ta: "chennai", hi: "delhi" };
   const cityOf = l => document.documentElement.dataset.city || CITY[l];
   // city pages (/city/<slug>/, /te/city/<slug>/, /ta/city/<slug>/) carry their own name and location
   const H = document.documentElement.dataset;
@@ -102,6 +131,8 @@
     te: ["https://t.me/panchangika_te", "https://www.youtube.com/@PanchangikaTelugu", null, "/te/stotrams/", "https://whatsapp.com/channel/0029Vb9rGqR8fewtWX36kT3n"],
     ta: ["https://t.me/panchangika_ta", "https://www.youtube.com/@PanchangikaTamil", "https://www.instagram.com/panchangika.tamil/", "/ta/stotrams/", "https://whatsapp.com/channel/0029VbDjBHEBfxo65RFk7V47"],
     en: ["https://t.me/panchangika_en", "https://www.youtube.com/@Panchangika", "https://www.instagram.com/panchangika.in/", "/stotrams/", "https://whatsapp.com/channel/0029VbED6csKQuJRkevtPc3c"],
+    // Hindi channels (27 Nov 2026); no Hindi Instagram yet: the English one
+    hi: ["https://t.me/panchangika_hi", "https://www.youtube.com/@PanchangikaHindi", "https://www.instagram.com/panchangika.in/", "/stotrams/", "https://whatsapp.com/channel/0029VbEJmADA2pLF3rHCHU2o"],
   };
 
   const $ = id => document.getElementById(id);
@@ -187,6 +218,11 @@
     $("date").innerHTML = `<span class="wd">${wd}</span> <span class="dn">${day}</span> <span class="mo">${mon} ${yr}</span>`;
     let l1, sv;
     if (lang === "ta") { l1 = `${N.TAMIL_MONTH.ta[D.tm]} ${D.td} · ${paksha}`; sv = t.samv(N.SAMVATSARA.ta[D.sva]); }
+    else if (lang === "hi") {   // North India: purnimanta months (in Krishna paksha one ahead of amanta) and Vikram Samvat
+      const krishna = D.t[0][0] >= 15, m = (D.lm + (krishna ? 1 : 0)) % 12;
+      const vy = yr - (D.lm >= 6 && d.getUTCMonth() < 4 ? 1 : 0) + 57;
+      l1 = `${(D.adh ? N.ADHIKA[lang] : "")}${t.masa(N.LUNAR_MONTH[lang][m])} · ${paksha}`; sv = `${N.LABEL.hi.samvatsara} ${vy}`;
+    }
     else { l1 = `${(D.adh ? N.ADHIKA[lang] : "")}${t.masa(N.LUNAR_MONTH[lang][D.lm])} · ${paksha}`; sv = t.samv(N.SAMVATSARA[lang][D.svt]); }
     $("sub").innerHTML = `${l1}<br>${sv}`;
     $("cityline").textContent = t.timesFor(cityName(lang));
@@ -244,7 +280,7 @@
   function lists(D, W) {
     const L = N.LABEL[lang], t = UI[lang];
     $("h-good").textContent = L.good;
-    $("h-avoid").textContent = lang === "ta" ? L.avoid : (lang === "te" ? "వర్జించవలసిన సమయాలు" : "Times to avoid");
+    $("h-avoid").textContent = (lang === "ta" || lang === "hi") ? L.avoid : (lang === "te" ? "వర్జించవలసిన సమయాలు" : "Times to avoid");
     const term = (id, label) => DEF[lang][id]
       ? `<button type="button" class="term" data-id="${id}" aria-describedby="deftip">${label}<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 7v4.2M8 4.6v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>`
       : `<span>${label}</span>`;
@@ -278,10 +314,10 @@
     try { v = JSON.parse(localStorage.getItem(TOWN_KEY) || "null"); } catch (e) { v = null; }
     if (!v || !/^[a-z0-9-]+$/.test(v.slug || "")) { el.hidden = true; return; }
     if (v.pin && !(v.names && v.names[lang])) {   // a PIN's own place name is known only in the language it was visited in
-      v.names = v.names || {}; v.names[lang] = ({ en: "PIN", te: "పిన్", ta: "பின்கோடு" })[lang] + " " + v.pin;
+      v.names = v.names || {}; v.names[lang] = ({ en: "PIN", te: "పిన్", ta: "பின்கோடு", hi: "पिन" })[lang] + " " + v.pin;
     }
     if (!(v.names && v.names[lang])) {   // name not stored in this language yet: find it on this language's city list, once
-      fetch({ en: "", te: "/te", ta: "/ta" }[lang] + "/city/").then(r => r.ok ? r.text() : "").then(html => {
+      fetch({ en: "", te: "/te", ta: "/ta", hi: "/hi" }[lang] + "/city/").then(r => r.ok ? r.text() : "").then(html => {
         const doc = new DOMParser().parseFromString(html, "text/html");
         const a = doc.querySelector(`a[href$="/city/${v.slug}/"]`);
         const town = a && a.textContent.trim();
@@ -293,7 +329,7 @@
       el.hidden = true; return;
     }
     const name = v.names[lang];
-    const href = { en: "", te: "/te", ta: "/ta" }[lang] + `/city/${v.slug}/` + (v.pin ? `?pin=${v.pin}` : "");
+    const href = { en: "", te: "/te", ta: "/ta", hi: "/hi" }[lang] + `/city/${v.slug}/` + (v.pin ? `?pin=${v.pin}` : "");
     el.textContent = "";
     el.append(UI[lang].myTown + " ");
     const a = document.createElement("a"); a.href = href; a.textContent = name + "\u00A0\u2192"; el.append(a);
@@ -310,8 +346,9 @@
     if ($("cta-wa")) $("cta-wa").href = LINKS[lang][4];
     if ($("cta-st")) $("cta-st").href = LINKS[lang][3];
     if ($("nav-st")) $("nav-st").href = LINKS[lang][3];
-    if ($("city-change")) $("city-change").href = { en: "/city/", te: "/te/city/", ta: "/ta/city/" }[lang];
-    if ($("cal-link")) $("cal-link").href = { en: "/calendar/", te: "/te/calendar/", ta: "/ta/calendar/" }[lang];
+    if ($("city-change")) $("city-change").href = { en: "/city/", te: "/te/city/", ta: "/ta/city/", hi: "/hi/city/" }[lang];
+    if ($("cal-link")) $("cal-link").href = { en: "/calendar/", te: "/te/calendar/", ta: "/ta/calendar/", hi: "/calendar/" }[lang];
+    if ($("sb-link")) { $("sb-link").href = { en: "/star-birthday/", te: "/te/star-birthday/", ta: "/ta/star-birthday/" }[lang] || "/star-birthday/"; $("sb-link").hidden = lang === "hi"; }
     showMyTown();
     const mine = ++seq;
     try {
@@ -334,8 +371,8 @@
   }
 
   // each language has its own address: / (English), /te/, /ta/
-  const PATH = isCityPage ? { en: `/city/${H.slug}/`, te: `/te/city/${H.slug}/`, ta: `/ta/city/${H.slug}/` }
-                          : { en: "/", te: "/te/", ta: "/ta/" };
+  const PATH = isCityPage ? { en: `/city/${H.slug}/`, te: `/te/city/${H.slug}/`, ta: `/ta/city/${H.slug}/`, hi: `/hi/city/${H.slug}/` }
+                          : { en: "/", te: "/te/", ta: "/ta/", hi: "/hi/" };
   const pageLang = document.documentElement.dataset.lang || "en";
   function pick() {
     const saved = store.get();
@@ -405,7 +442,7 @@
     try {
       const d = await json(`/data/pin/${pin.slice(0, 2)}.json`), e = d && d[pin];
       if (!e) return;
-      // te/ta: post office names exist only in English, so the nearby town's own-language name goes with them
+      // te/ta/hi: post office names exist only in English, so the nearby town's own-language name goes with them
       const office0 = e[2].split(", ")[0], old = H.name, oldSt = H.state || "";
       // te/ta: name the nearby listed town (in that language) only when the PIN really is near it (<= 25 km);
       // otherwise, and always in English, name the PIN's district
@@ -413,9 +450,9 @@
         return 2 * R * Math.asin(Math.sqrt(Math.sin((la2 - la1) / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin(dl / 2) ** 2)); })();
       const area = pageLang !== "en" && near <= 25 && !e[5] ? old : e[3];
       const office = !area || area === office0 || office0.includes(area) ? office0 : `${office0}, ${area}`;
-      const nm = `${office}\u00A0· ${{ en: "PIN", te: "పిన్", ta: "பின்கோடு" }[pageLang] || "PIN"} ${pin}`;
+      const nm = `${office}\u00A0· ${{ en: "PIN", te: "పిన్", ta: "பின்கோடு", hi: "पिन" }[pageLang] || "PIN"} ${pin}`;
       let st = "";
-      try { const S = await json("/data/pin/states.json"); st = (S[e[6]] || [])[{ en: 0, te: 1, ta: 2 }[pageLang]] || ""; } catch (err) { }
+      try { const S = await json("/data/pin/states.json"); st = (S[e[6]] || [])[{ en: 0, te: 1, ta: 2, hi: 3 }[pageLang]] || ""; } catch (err) { }
       H.lat = e[0]; H.lon = e[1]; H.name = nm;
       document.querySelectorAll("h1, main .lead").forEach(el => {
         let t = el.textContent;

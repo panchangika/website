@@ -64,6 +64,7 @@ body::before{content:"";display:block;height:10px;
   border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
 .langs [data-l=te],.langs a[lang=te]{font-family:"Noto Sans Telugu",sans-serif}
 .langs [data-l=ta],.langs a[lang=ta]{font-family:"Noto Sans Tamil",sans-serif}
+.langs [data-l=hi],.langs a[lang=hi]{font-family:"Noto Sans Devanagari","Inter",sans-serif}
 .langs [data-l=en],.langs a[lang=en]{font-family:"Inter",sans-serif}
 .langs button[aria-pressed=true],.langs a[aria-current]{background:var(--maroon);color:#FFF4E2}
 .langs button:hover:not([aria-pressed=true]),.langs a:hover:not([aria-current]){color:var(--maroon);background:var(--leaf)}
@@ -325,8 +326,8 @@ html[lang=te] .citylist h2,html[lang=ta] .citylist h2{font-family:var(--body);fo
   .top{padding:14px 0 10px}
   .brand span{font-size:23px}
   .brand img{width:38px;height:38px}
-  .langs{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}
-  .langs button,.langs a{padding:0 6px;font-size:15px}
+  .langs{width:100%;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+  .langs button,.langs a{padding:0 4px;font-size:14px}
   section{padding:40px 0}
   .sheet .date .dn{font-size:84px}
   .sheet-in{padding:28px 14px 18px}
@@ -384,3 +385,33 @@ html[lang=te] .citylist h2,html[lang=ta] .citylist h2{font-family:var(--body);fo
 @media print{ .sheet .mytown,.sheet .callink{display:none} }
 /* stotram pages on phones: picture above the text so long names (Mahamrityunjaya) never split mid-word (26 Nov) */
 @media (max-width:480px){ .st-pic{float:none;width:132px;margin:8px auto 12px} }
+/* ---- Find your star birthday (27 Nov 2026) ---- */
+.sb-form{display:grid;gap:14px;background:#fff;border:1px solid #ead9b8;border-radius:16px;padding:18px;margin:18px 0}
+.sb-form label{display:grid;gap:6px;font-weight:600;color:#6B1E2E}
+.sb-form input[type=date],.sb-form input[type=time],.sb-form select,.sb-form input[list]{font:inherit;font-weight:400;padding:10px 12px;border:1px solid #d9c29a;border-radius:10px;background:#FBF5EA;color:#2b1a10;width:100%;box-sizing:border-box;min-height:44px}
+.sb-form .sb-check,.sb-modes label{display:flex;align-items:center;gap:8px;font-weight:400;color:#2b1a10}
+.sb-modes{display:flex;flex-wrap:wrap;gap:8px 18px}
+#sb-birth,#sb-known{display:grid;gap:14px}
+#sb-birth[hidden],#sb-known[hidden]{display:none}
+#sb-go{font:inherit;font-weight:700;padding:14px;border:0;border-radius:12px;background:#D9731A;color:#fff;cursor:pointer;min-height:48px}
+#sb-go:disabled{opacity:.5}
+.sb-res{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 4px}
+.sb-star{background:#6B1E2E;color:#FBF5EA;border-radius:14px;padding:14px;display:grid;gap:2px}
+.sb-star span{font-size:.85em;opacity:.85}.sb-star b{font-size:1.5em;color:#F2A541}.sb-star small{opacity:.8}
+.sb-list{list-style:none;padding:0;margin:8px 0;display:grid;gap:8px}
+.sb-list li{background:#fff;border:1px solid #ead9b8;border-left:6px solid #D9731A;border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sb-list li span{color:#B8862E;font-weight:600}
+.sb-list li.sb-note,.sb-note{display:block;background:#fff7e6;border-left-color:#B8862E;font-size:.92em;color:#4a3420}
+.sb-warn{color:#b3473d;font-weight:600}
+.sb-pick{font:inherit;padding:6px 12px;margin:4px 4px 0 0;border:1px solid #D9731A;border-radius:999px;background:#fff;color:#6B1E2E;cursor:pointer}
+.sb-pick.on{background:#D9731A;color:#fff}
+.sb-town{color:#7a6050;font-size:.9em}
+@media (max-width:480px){.sb-res{grid-template-columns:1fr}}
+/* ---- Section tabs under the logo (27 Nov 2026) ---- */
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 0 10px;margin-bottom:6px;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{flex:0 0 auto;white-space:nowrap;text-decoration:none;color:#6B1E2E;font-weight:600;font-size:15px;padding:8px 14px;border:1px solid var(--line,#ead9b8);border-radius:999px;background:#fff}
+.tabs a:hover{border-color:#D9731A;color:#D9731A}
+.tabs a[aria-current="page"]{background:#6B1E2E;border-color:#6B1E2E;color:#FBF5EA}
+@media (max-width:480px){.tabs{margin:0 -20px 4px;padding:2px 20px 10px}.tabs a{font-size:14px;padding:7px 12px}}
+@media print{.tabs{display:none!important}}
